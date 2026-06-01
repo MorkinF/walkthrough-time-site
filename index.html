@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Walk Through Time — Discover Deventer's Hidden History</title>
-  <meta name="description" content="Walk through centuries of history in Deventer. An audio tour app with historical photo comparisons, a 1899 map overlay, and 12 fascinating locations to discover.">
+  <title>Walk Through Time — Ontdek de verborgen geschiedenis van Deventer</title>
+  <meta name="description" content="Wandel door eeuwen geschiedenis in Deventer. Een audio-tour app met voor/na foto's, historische kaarten en 23 bijzondere locaties om te ontdekken.">
   <meta name="theme-color" content="#2D4059">
 
   <!-- Open Graph -->
-  <meta property="og:title" content="Walk Through Time — Discover Deventer's Hidden History">
-  <meta property="og:description" content="Step back in time. Explore 12 historical locations with audio stories, photo comparisons, and a map from 1899.">
+  <meta property="og:title" content="Walk Through Time — Ontdek de verborgen geschiedenis van Deventer">
+  <meta property="og:description" content="Stap terug in de tijd. Verken 23 historische locaties met audio-verhalen, voor/na foto's en eeuwenoude kaarten.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://walkthrough-time.com">
   <meta property="og:image" content="https://walkthrough-time.com/images/og-image.jpg">
@@ -30,12 +30,17 @@
         Walk Through Time
       </a>
       <ul class="nav-links">
-        <li><a href="#features">Features</a></li>
-        <li><a href="#discover">Discover</a></li>
-        <li><a href="#locations">Locations</a></li>
-        <li><a href="#download" class="nav-cta">Download</a></li>
+        <li><a href="#features" data-i18n="nav.features">Functies</a></li>
+        <li><a href="#discover" data-i18n="nav.discover">Ontdek</a></li>
+        <li><a href="#locations" data-i18n="nav.locations">Locaties</a></li>
+        <li><a href="#download" class="nav-cta" data-i18n="nav.cta">Hou me op de hoogte</a></li>
+        <li class="lang-switch" aria-label="Taal / Language">
+          <button type="button" class="lang-btn" data-lang="nl">NL</button>
+          <span class="lang-sep">/</span>
+          <button type="button" class="lang-btn" data-lang="en">EN</button>
+        </li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu">
+      <button class="nav-toggle" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -46,19 +51,16 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge">Free Audio Tour App</div>
-      <h1>Walk Through <span>Time</span></h1>
-      <p class="hero-text">
-        Discover centuries of history hidden in the streets of Deventer.
-        Listen to stories, compare past and present, and see the city
-        as it was over 125 years ago.
+      <div class="hero-badge" data-i18n="hero.badge">Gratis audio-wandeling</div>
+      <h1 data-i18n-html="hero.title">Wandel door de <span>tijd</span></h1>
+      <p class="hero-text" data-i18n="hero.text">
+        Ontdek eeuwen geschiedenis, verborgen in de straten van Deventer.
+        Luister naar verhalen, vergelijk verleden en heden, en zie de stad
+        zoals die er lang geleden uitzag.
       </p>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          Download the App
-        </a>
-        <a href="#discover" class="btn btn-outline">See How It Works</a>
+        <a href="#download" class="btn btn-primary" data-i18n="hero.cta_primary">Binnenkort beschikbaar</a>
+        <a href="#discover" class="btn btn-outline" data-i18n="hero.cta_secondary">Bekijk hoe het werkt</a>
       </div>
     </div>
     <div class="hero-scroll">
@@ -71,8 +73,8 @@
   <!-- ======== Features ======== -->
   <section class="features" id="features">
     <div class="container">
-      <h2 class="section-title fade-up">History Comes Alive</h2>
-      <p class="section-subtitle fade-up">Four ways to experience Deventer's rich past, right from your phone.</p>
+      <h2 class="section-title fade-up" data-i18n="features.title">Geschiedenis komt tot leven</h2>
+      <p class="section-subtitle fade-up" data-i18n="features.subtitle">Zes manieren om de rijke geschiedenis van Deventer te beleven, direct vanaf je telefoon.</p>
 
       <div class="features-grid">
 
@@ -80,32 +82,48 @@
           <div class="feature-icon audio">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></svg>
           </div>
-          <h3>Audio Stories</h3>
-          <p>Each location has its own narrated story. Put in your earbuds, walk through the city, and let history speak to you.</p>
+          <h3 data-i18n="feature.audio.title">Audio-verhalen op locatie</h3>
+          <p data-i18n="feature.audio.text">Elke plek heeft zijn eigen verteld verhaal. Doe je oortjes in, wandel door de stad en laat de geschiedenis tot je spreken — ook met je scherm uit. Een overkoepelende stadsgeschiedenis luister je als introductie.</p>
         </div>
 
         <div class="feature-card fade-up">
           <div class="feature-icon photo">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="3" x2="12" y2="21"/><polyline points="8 7 4 7"/><polyline points="20 7 16 7"/></svg>
           </div>
-          <h3>Then &amp; Now</h3>
-          <p>Slide between historical and present-day photographs. See how buildings, streets, and landmarks have transformed over the centuries.</p>
+          <h3 data-i18n="feature.photo.title">Voor &amp; na</h3>
+          <p data-i18n="feature.photo.text">Schuif tussen oude prenten of foto's en de situatie van vandaag. Sommige locaties tonen meerdere paren uit verschillende tijdperken.</p>
         </div>
 
         <div class="feature-card fade-up">
           <div class="feature-icon map">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/><line x1="8" y1="2" x2="8" y2="18"/><line x1="16" y1="6" x2="16" y2="22"/></svg>
           </div>
-          <h3>1899 Map Overlay</h3>
-          <p>Toggle a detailed historical map over today's streets. Watch the city of 1899 appear beneath your feet as you explore.</p>
+          <h3 data-i18n="feature.map.title">Historische kaarten</h3>
+          <p data-i18n="feature.map.text">Leg eeuwenoude stadsplattegronden over de huidige kaart. Schakel zelf welke kaart je onder je voeten ziet verschijnen.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon routes">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/><circle cx="18" cy="5" r="3"/></svg>
+          </div>
+          <h3 data-i18n="feature.routes.title">Wandelroutes &amp; navigatie</h3>
+          <p data-i18n="feature.routes.text">Kant-en-klare routes door themagebieden zoals de Hanze of religieus erfgoed, inclusief voetgangersnavigatie van plek naar plek.</p>
+        </div>
+
+        <div class="feature-card fade-up">
+          <div class="feature-icon arrival">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <h3 data-i18n="feature.arrival.title">Aankomst-meldingen</h3>
+          <p data-i18n="feature.arrival.text">Krijg een trilling en melding zodra je bij een nieuwe locatie aankomt — zelfs met je telefoon in je broekzak. Geen vaste route nodig.</p>
         </div>
 
         <div class="feature-card fade-up">
           <div class="feature-icon badge">
             <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
           </div>
-          <h3>Collect Badges</h3>
-          <p>Visit locations to earn unique badges. Track your progress and become a true Deventer history expert.</p>
+          <h3 data-i18n="feature.badges.title">Badges &amp; voortgang</h3>
+          <p data-i18n="feature.badges.text">Verzamel een badge bij elke bezochte locatie. Maak een herstelcode aan om je voortgang mee te nemen naar een ander toestel.</p>
         </div>
 
       </div>
@@ -115,51 +133,51 @@
   <!-- ======== Image Comparison ======== -->
   <section class="comparison" id="discover">
     <div class="container">
-      <h2 class="section-title fade-up">See the Difference</h2>
-      <p class="section-subtitle fade-up">Drag the slider to travel between past and present.</p>
+      <h2 class="section-title fade-up" data-i18n="comparison.title">Zie het verschil</h2>
+      <p class="section-subtitle fade-up" data-i18n="comparison.subtitle">Sleep de schuif om tussen verleden en heden te reizen.</p>
 
       <div class="comparison-wrapper fade-up">
-        <img src="images/brink_original.jpg" alt="De Brink — Historical" class="comparison-img-before">
-        <img src="images/brink_restored.png" alt="De Brink — Restored" class="comparison-img-after">
+        <img src="images/brink_original.jpg" alt="De Brink — historisch" class="comparison-img-before">
+        <img src="images/brink_restored.png" alt="De Brink — nu" class="comparison-img-after">
         <div class="comparison-slider">
           <div class="comparison-handle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
           </div>
         </div>
-        <span class="comparison-label before">Then</span>
-        <span class="comparison-label after">Now</span>
+        <span class="comparison-label before" data-i18n="comparison.before">Toen</span>
+        <span class="comparison-label after" data-i18n="comparison.after">Nu</span>
       </div>
-      <p class="comparison-caption fade-up">De Brink — Deventer's historic market square through the ages</p>
+      <p class="comparison-caption fade-up" data-i18n="comparison.caption">De Brink — Deventers historische marktplein door de eeuwen heen</p>
     </div>
   </section>
 
   <!-- ======== How It Works ======== -->
   <section class="how-it-works">
     <div class="container">
-      <h2 class="section-title fade-up">How It Works</h2>
-      <p class="section-subtitle fade-up">Three simple steps to start your journey through time.</p>
+      <h2 class="section-title fade-up" data-i18n="how.title">Hoe het werkt</h2>
+      <p class="section-subtitle fade-up" data-i18n="how.subtitle">In drie eenvoudige stappen begin je je reis door de tijd.</p>
 
       <div class="steps">
         <div class="step fade-up">
           <div class="step-number">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </div>
-          <h3>Download</h3>
-          <p>Get the free app and head to Deventer's city center. Works best on location — but feel free to explore from home too.</p>
+          <h3 data-i18n="step.download.title">Download</h3>
+          <p data-i18n="step.download.text">Haal straks de gratis app op en ga naar het centrum van Deventer. Werkt het best op locatie — maar verkennen vanuit huis kan ook.</p>
         </div>
         <div class="step fade-up">
           <div class="step-number">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
           </div>
-          <h3>Explore</h3>
-          <p>The app detects when you're near a historic site. Walk at your own pace — there's no fixed route.</p>
+          <h3 data-i18n="step.explore.title">Verken</h3>
+          <p data-i18n="step.explore.text">De app merkt wanneer je in de buurt van een historische plek bent. Wandel op je eigen tempo — er is geen vaste route.</p>
         </div>
         <div class="step fade-up">
           <div class="step-number">
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
           </div>
-          <h3>Discover</h3>
-          <p>Listen to stories, compare historic photos, and uncover the hidden layers of the city around you.</p>
+          <h3 data-i18n="step.discover.title">Ontdek</h3>
+          <p data-i18n="step.discover.text">Luister naar verhalen, vergelijk oude foto's en ontdek de verborgen lagen van de stad om je heen.</p>
         </div>
       </div>
     </div>
@@ -168,35 +186,36 @@
   <!-- ======== Locations Teaser ======== -->
   <section class="locations" id="locations">
     <div class="container">
-      <h2 class="section-title fade-up">12 Locations to Discover</h2>
-      <p class="section-subtitle fade-up">Medieval churches, Renaissance houses, centuries-old market squares — each with its own story.</p>
+      <h2 class="section-title fade-up" data-i18n="locations.title">23 locaties om te ontdekken</h2>
+      <p class="section-subtitle fade-up" data-i18n="locations.subtitle">Middeleeuwse kerken, Hanze-pakhuizen, eeuwenoude marktpleinen — elk met zijn eigen verhaal.</p>
 
       <div class="locations-preview">
         <div class="location-card fade-up">
           <img src="images/waag_original.jpg" alt="De Waag" loading="lazy">
           <div class="location-card-overlay">
             <h3>De Waag</h3>
-            <p>Weighing house, est. 1528</p>
+            <p data-i18n="locations.waag">Waaggebouw, 1528</p>
           </div>
         </div>
         <div class="location-card fade-up">
           <img src="images/lebuinuskerk_original.jpg" alt="Lebuïnuskerk" loading="lazy">
           <div class="location-card-overlay">
             <h3>Lebuïnuskerk</h3>
-            <p>Founded in the 8th century</p>
+            <p data-i18n="locations.lebuinus">Gesticht in de 8e eeuw</p>
           </div>
         </div>
         <div class="location-card fade-up">
-          <img src="images/waag_restored.png" alt="More locations" loading="lazy">
+          <img src="images/waag_restored.png" alt="Meer locaties" loading="lazy">
           <div class="location-card-overlay">
-            <h3>And 10 More...</h3>
-            <p>Download to discover them all</p>
+            <h3 data-i18n="locations.more_title">En nog 20 meer…</h3>
+            <p data-i18n="locations.more_sub">Download om ze allemaal te ontdekken</p>
           </div>
         </div>
       </div>
 
       <div class="locations-more fade-up">
-        <p>From the <span>Brink</span> to the <span>Bergkwartier</span> — a walk through 1000 years of history.</p>
+        <p data-i18n-html="locations.more">Van de <span>Brink</span> tot het <span>Bergkwartier</span> — een wandeling door 1000 jaar geschiedenis.</p>
+        <p class="locations-multicity" data-i18n="locations.multicity">Beginnend in Deventer — meer steden volgen.</p>
       </div>
     </div>
   </section>
@@ -204,24 +223,36 @@
   <!-- ======== CTA / Download ======== -->
   <section class="cta" id="download">
     <div class="container cta-content">
-      <h2 class="fade-up">Ready to Step Back in Time?</h2>
-      <p class="fade-up">Download Walk Through Time for free and start exploring Deventer's hidden history today.</p>
+      <h2 class="fade-up" data-i18n="cta.title">Klaar om terug in de tijd te stappen?</h2>
+      <p class="fade-up" data-i18n="cta.text">De app is bijna klaar. Laat je e-mail achter en we laten het je weten zodra Walk Through Time in de stores verschijnt.</p>
+
+      <!-- Aanmeldformulier (Netlify Forms) -->
+      <form name="signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form fade-up">
+        <input type="hidden" name="form-name" value="signup">
+        <p class="signup-hp"><label>Niet invullen: <input name="bot-field"></label></p>
+        <input type="email" name="email" class="signup-input" required
+               placeholder="jouw@email.nl" data-i18n-placeholder="form.placeholder"
+               autocomplete="email">
+        <button type="submit" class="btn btn-primary" data-i18n="form.button">Hou me op de hoogte</button>
+      </form>
+      <p class="signup-message" role="status" aria-live="polite" hidden></p>
+      <p class="signup-note fade-up" data-i18n="form.note">We gebruiken je e-mail alleen om je te laten weten dat de app live is — niets anders.</p>
 
       <div class="store-buttons fade-up">
-        <a href="#" class="store-btn" aria-label="Get it on Google Play">
+        <span class="store-btn is-soon" aria-disabled="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 3.458L16.8 9.79l-2.302 2.302L5.864 3.458z"/></svg>
           <div class="store-label">
-            <small>Get it on</small>
+            <small data-i18n="store.soon">Binnenkort op</small>
             <strong>Google Play</strong>
           </div>
-        </a>
-        <a href="#" class="store-btn" aria-label="Download on the App Store">
+        </span>
+        <span class="store-btn is-soon" aria-disabled="true">
           <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           <div class="store-label">
-            <small>Coming soon on</small>
+            <small data-i18n="store.soon">Binnenkort op</small>
             <strong>App Store</strong>
           </div>
-        </a>
+        </span>
       </div>
     </div>
   </section>
@@ -234,8 +265,8 @@
         Walk Through Time &copy; 2026
       </div>
       <ul class="footer-links">
-        <li><a href="/privacy-policy.html">Privacy Policy</a></li>
-        <li><a href="mailto:info@walkthrough-time.com">Contact</a></li>
+        <li><a href="privacy-policy.html" data-i18n="footer.privacy" data-i18n-href="footer.privacy_href">Privacybeleid</a></li>
+        <li><a href="mailto:walkthroughtime0570@gmail.com" data-i18n="footer.contact">Contact</a></li>
       </ul>
     </div>
   </footer>

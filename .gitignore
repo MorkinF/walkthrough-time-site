@@ -1,0 +1,8 @@
+# Local Claude Code working files (not part of the site)
+.claude/
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/

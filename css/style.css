@@ -216,18 +216,24 @@ section {
 .hero-bg {
   position: absolute;
   inset: 0;
-  background: url('../images/deventer-1899.png') center/cover no-repeat;
-  opacity: 0.12;
+  background-image: url('../images/deventer-1899.png');
+  background-position: center top;
+  background-size: 150%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
+  -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
 }
 
 .hero-overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
-    160deg,
-    rgba(26, 58, 82, 0.95) 0%,
-    rgba(45, 64, 89, 0.88) 50%,
-    rgba(200, 75, 49, 0.3) 100%
+    to bottom,
+    rgba(26, 58, 82, 1) 0%,
+    rgba(26, 58, 82, 0.9) 35%,
+    rgba(45, 64, 89, 0.65) 65%,
+    rgba(45, 64, 89, 0.3) 100%
   );
 }
 
@@ -386,10 +392,12 @@ section {
   font-size: 1.5rem;
 }
 
-.feature-icon.audio { background: rgba(200, 75, 49, 0.1); color: var(--primary); }
-.feature-icon.photo { background: rgba(212, 165, 116, 0.2); color: var(--soft-gold); }
-.feature-icon.map   { background: rgba(45, 64, 89, 0.1); color: var(--secondary); }
-.feature-icon.badge { background: rgba(95, 167, 119, 0.12); color: #5FA777; }
+.feature-icon.audio   { background: rgba(200, 75, 49, 0.1); color: var(--primary); }
+.feature-icon.photo   { background: rgba(212, 165, 116, 0.2); color: var(--soft-gold); }
+.feature-icon.map     { background: rgba(45, 64, 89, 0.1); color: var(--secondary); }
+.feature-icon.routes  { background: rgba(95, 167, 119, 0.12); color: #5FA777; }
+.feature-icon.arrival { background: rgba(200, 75, 49, 0.1); color: var(--primary); }
+.feature-icon.badge   { background: rgba(212, 165, 116, 0.2); color: var(--soft-gold); }
 
 .feature-card h3 {
   font-size: 1.25rem;
@@ -893,4 +901,134 @@ section {
     flex-direction: column;
     align-items: center;
   }
+}
+
+/* ============================================
+   Language switch (nav)
+   ============================================ */
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.15rem 0.35rem;
+  border-radius: 6px;
+  color: rgba(255, 255, 255, 0.6);
+  transition: color 0.2s;
+}
+
+.lang-btn:hover { color: #fff; }
+.lang-btn.is-active { color: var(--soft-gold); }
+
+.lang-sep { color: rgba(255, 255, 255, 0.3); }
+
+/* Scrolled nav uses the light background, so flip to dark text */
+.nav.scrolled .lang-btn { color: var(--text-light); }
+.nav.scrolled .lang-btn:hover,
+.nav.scrolled .lang-btn.is-active { color: var(--primary); }
+.nav.scrolled .lang-sep { color: var(--border); }
+
+/* ============================================
+   Multi-city line (locations)
+   ============================================ */
+
+.locations-multicity {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-light);
+  font-style: italic;
+}
+
+/* ============================================
+   Signup form (CTA)
+   ============================================ */
+
+.signup-form {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 480px;
+  margin: 0 auto 1rem;
+}
+
+.signup-input {
+  flex: 1 1 240px;
+  padding: 0.875rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+.signup-input::placeholder { color: rgba(255, 255, 255, 0.5); }
+
+.signup-input:focus {
+  outline: none;
+  border-color: var(--soft-gold);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+/* Honeypot field — hidden from real users, catches bots */
+.signup-hp { display: none; }
+
+.signup-message {
+  max-width: 480px;
+  margin: 0 auto 1rem;
+  color: var(--soft-gold);
+  font-weight: 600;
+}
+
+.signup-message.is-error { color: #FFB4A6; }
+
+.signup-note {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8125rem;
+  max-width: 420px;
+  margin: 0 auto 2.5rem;
+}
+
+/* ============================================
+   Store badges — "coming soon" (non-clickable)
+   ============================================ */
+
+.store-btn.is-soon {
+  opacity: 0.55;
+  cursor: default;
+}
+
+.store-btn.is-soon:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: none;
+}
+
+/* ============================================
+   Responsive overrides for new components
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* Inside the mobile dropdown the background is light — flip text dark */
+  .nav-links .lang-switch {
+    justify-content: center;
+    padding: 0.75rem 0;
+    gap: 0.6rem;
+  }
+
+  .nav-links .lang-btn { color: var(--text-secondary); }
+  .nav-links .lang-btn.is-active { color: var(--primary); }
+  .nav-links .lang-sep { color: var(--border); }
+
+  .signup-form { flex-direction: column; }
+  .signup-form .btn { justify-content: center; }
 }

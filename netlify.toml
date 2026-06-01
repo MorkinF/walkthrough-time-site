@@ -1,0 +1,13 @@
+# Netlify configuration for the Walk Through Time marketing site.
+# This is a plain static site (no build step) — Netlify serves the repo root as-is.
+# Used when the site is connected to Netlify via Git. For drag-and-drop deploys
+# this file is ignored, which is fine.
+
+[build]
+  publish = "."
+
+# Long-cache the static assets (images/css/js are versioned by edits, html stays fresh).
+[[headers]]
+  for = "/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=604800"

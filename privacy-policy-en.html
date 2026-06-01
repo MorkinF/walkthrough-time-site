@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — Walk Through Time</title>
+  <meta name="theme-color" content="#2D4059">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <style>
+    :root {
+      --primary: #C84B31;
+      --secondary: #2D4059;
+      --soft-gold: #D4A574;
+      --background: #F7F5F0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.7;
+      background: var(--background);
+    }
+    .policy-header {
+      background: var(--secondary);
+      padding: 1rem 0;
+    }
+    .policy-header .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .policy-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .policy-header img { width: 32px; height: 32px; border-radius: 8px; }
+    .policy-lang { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; }
+    .policy-lang a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-weight: 600; }
+    .policy-lang a:hover { color: #fff; }
+    .policy-lang .current { color: var(--soft-gold); font-weight: 700; }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    h1 { color: var(--secondary); margin-top: 0; }
+    h2 { color: var(--primary); margin-top: 2em; }
+    a  { color: var(--primary); }
+    p, li { margin: 0.6em 0; }
+    .updated { color: #888; font-size: 0.9em; }
+    .back {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="policy-header">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png" alt="Walk Through Time">
+        Walk Through Time
+      </a>
+      <nav class="policy-lang">
+        <a href="privacy-policy.html">Nederlands</a>
+        <span class="current">English</span>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <h1>Privacy Policy</h1>
+  <p class="updated">Last updated: 13 May 2026</p>
+
+  <p>
+    This privacy policy applies to the mobile app <strong>Walk Through Time</strong>,
+    developed by <strong>Walk Through Time (WTT)</strong>. We value your privacy and
+    handle your data with care.
+  </p>
+
+  <h2>1. What data do we process?</h2>
+  <p>
+    The app processes the following data:
+  </p>
+  <ul>
+    <li>
+      <strong>Location data (GPS):</strong> The app requests access to your location to determine
+      whether you are near a historical location. This data is <em>processed solely on your device</em>
+      and is never stored on our servers or shared with third parties.
+    </li>
+    <li>
+      <strong>Progress data (local):</strong> Visited locations, earned badges and points are stored
+      locally on your device using secure storage (Expo SecureStore and, for non-sensitive data,
+      AsyncStorage). This data does not leave your device unless you actively create a backup (see below).
+    </li>
+    <li>
+      <strong>Optional backup with recovery code:</strong> You can voluntarily create a backup of your
+      progress via the Badges page. In that case, only your visited locations, unlocked badges and earned
+      points are stored anonymously on our servers (Supabase), linked to a 6-character recovery code that
+      you keep yourself. <em>No</em> personal data, email addresses or device identifiers are sent. The
+      recovery code is generated server-side and is known only to you.
+    </li>
+  </ul>
+
+  <h2>2. Advertising (Google AdMob)</h2>
+  <p>
+    The app shows advertisements via <strong>Google AdMob</strong>, an advertising service from Google LLC.
+    AdMob may collect technical data, such as an advertising ID from your device, to display ads and
+    measure their effectiveness.
+  </p>
+  <p>
+    When you first launch the app, you are asked to consent to personalized advertising (GDPR consent).
+    You can refuse this consent; you will then receive non-personalized ads.
+  </p>
+  <p>
+    For more information on how Google handles data, please refer to Google's privacy policy:
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+  </p>
+
+  <h2>3. No user accounts</h2>
+  <p>
+    The app does not use user accounts. You do not need to register or log in. We do not collect any
+    personally identifiable information.
+  </p>
+
+  <h2>4. Third-party services</h2>
+  <p>
+    The app uses the following third-party services:
+  </p>
+  <ul>
+    <li>
+      <strong>Google Maps:</strong> For displaying the map. Google's
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacy policy</a> applies.
+    </li>
+    <li>
+      <strong>Supabase:</strong> For retrieving content (location texts, images and audio), and for the
+      optional backup of your progress with a recovery code (see section 1). No personal data is sent to
+      Supabase. More information:
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.
+    </li>
+    <li>
+      <strong>OpenRouteService:</strong> For calculating walking routes. No personal data is sent. More
+      information:
+      <a href="https://openrouteservice.org/privacy-policy/" target="_blank" rel="noopener">openrouteservice.org/privacy-policy</a>.
+    </li>
+    <li>
+      <strong>Google AdMob:</strong> See section 2.
+    </li>
+  </ul>
+
+  <h2>5. Your rights (GDPR)</h2>
+  <p>
+    Under the General Data Protection Regulation (GDPR) you have the right to access, rectify and erase
+    your data. Because we do not store any personal data, there is nothing for us to access or delete.
+  </p>
+  <p>
+    Data collected by Google AdMob falls under Google's privacy policy. For requests about this, you can
+    contact Google via <a href="https://myaccount.google.com" target="_blank" rel="noopener">myaccount.google.com</a>.
+  </p>
+  <p>
+    You can erase your local app data (badges, visits) yourself via:
+    <em>Settings → Apps → Walk Through Time → Storage → Clear data</em>.
+  </p>
+  <p>
+    Have you created a backup with a recovery code and want it deleted? Send an email with your recovery
+    code to the address in section 6 — we will then manually delete the corresponding backup row. Without
+    the code we cannot identify your backup, because there is no link to you as a person.
+  </p>
+
+  <h2>6. Contact</h2>
+  <p>
+    Questions about this privacy policy? Contact us at:<br />
+    <a href="mailto:walkthroughtime0570@gmail.com">walkthroughtime0570@gmail.com</a>
+  </p>
+
+  <h2>7. Changes</h2>
+  <p>
+    This privacy policy may be updated. The most current version is always available on this page. In case
+    of significant changes, you will be notified via the app.
+  </p>
+
+  <a class="back" href="index.html">&larr; Back to the homepage</a>
+  </main>
+
+</body>
+</html>

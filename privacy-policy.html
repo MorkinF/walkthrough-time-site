@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacybeleid — Walk Through Time</title>
+  <meta name="theme-color" content="#2D4059">
+  <link rel="icon" type="image/png" href="images/icon.png">
+  <style>
+    :root {
+      --primary: #C84B31;
+      --secondary: #2D4059;
+      --soft-gold: #D4A574;
+      --background: #F7F5F0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
+      margin: 0;
+      color: #333;
+      line-height: 1.7;
+      background: var(--background);
+    }
+    .policy-header {
+      background: var(--secondary);
+      padding: 1rem 0;
+    }
+    .policy-header .inner {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+    .policy-header .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+    .policy-header img { width: 32px; height: 32px; border-radius: 8px; }
+    .policy-lang { display: flex; align-items: center; gap: 0.6rem; font-size: 0.85rem; }
+    .policy-lang a { color: rgba(255, 255, 255, 0.7); text-decoration: none; font-weight: 600; }
+    .policy-lang a:hover { color: #fff; }
+    .policy-lang .current { color: var(--soft-gold); font-weight: 700; }
+    main {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 40px 20px 60px;
+    }
+    h1 { color: var(--secondary); margin-top: 0; }
+    h2 { color: var(--primary); margin-top: 2em; }
+    a  { color: var(--primary); }
+    p, li { margin: 0.6em 0; }
+    .updated { color: #888; font-size: 0.9em; }
+    .back {
+      display: inline-block;
+      margin-top: 2.5rem;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="policy-header">
+    <div class="inner">
+      <a class="brand" href="index.html">
+        <img src="images/icon.png" alt="Walk Through Time">
+        Walk Through Time
+      </a>
+      <nav class="policy-lang">
+        <span class="current">Nederlands</span>
+        <a href="privacy-policy-en.html">English</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+  <h1>Privacybeleid</h1>
+  <p class="updated">Laatst bijgewerkt: 13 mei 2026</p>
+
+  <p>
+    Dit privacybeleid is van toepassing op de mobiele app <strong>Walk Through Time</strong>,
+    ontwikkeld door <strong>Walk Through Time (WTT)</strong>. Wij hechten veel waarde aan uw
+    privacy en gaan zorgvuldig om met uw gegevens.
+  </p>
+
+  <h2>1. Welke gegevens verwerken wij?</h2>
+  <p>
+    De app verwerkt de volgende gegevens:
+  </p>
+  <ul>
+    <li>
+      <strong>Locatiegegevens (GPS):</strong> De app vraagt toegang tot uw locatie om te bepalen
+      of u zich in de buurt van een historische locatie bevindt. Deze gegevens worden
+      <em>uitsluitend op uw apparaat verwerkt</em> en worden nooit opgeslagen op onze servers
+      of gedeeld met derden.
+    </li>
+    <li>
+      <strong>Voortgangsgegevens (lokaal):</strong> Bezochte locaties, verdiende badges en
+      punten worden lokaal op uw apparaat opgeslagen via beveiligde opslag (Expo SecureStore
+      en, voor niet-gevoelige gegevens, AsyncStorage). Deze gegevens verlaten uw apparaat
+      niet, tenzij u zelf actief een backup aanmaakt (zie hieronder).
+    </li>
+    <li>
+      <strong>Optionele backup met herstelcode:</strong> U kunt vrijwillig een backup van uw
+      voortgang maken via de Badges-pagina. In dat geval worden uitsluitend uw bezochte locaties,
+      ontgrendelde badges en behaalde punten anoniem op onze servers (Supabase) opgeslagen,
+      gekoppeld aan een 6-teken herstelcode die u zelf bewaart. Er worden <em>geen</em>
+      persoonsgegevens, e-mailadressen of apparaat-identificatoren meegestuurd. De herstelcode
+      wordt server-side gegenereerd en is alleen bij u bekend.
+    </li>
+  </ul>
+
+  <h2>2. Advertenties (Google AdMob)</h2>
+  <p>
+    De app toont advertenties via <strong>Google AdMob</strong>, een advertentiedienst van Google LLC.
+    AdMob kan technische gegevens verzamelen, zoals een advertentie-ID van uw apparaat, om
+    advertenties te tonen en de effectiviteit ervan te meten.
+  </p>
+  <p>
+    Wanneer u de app voor het eerst opstart, wordt u gevraagd toestemming te geven voor
+    gepersonaliseerde advertenties (GDPR-toestemming). U kunt deze toestemming weigeren;
+    u ontvangt dan niet-gepersonaliseerde advertenties.
+  </p>
+  <p>
+    Voor meer informatie over hoe Google met gegevens omgaat, verwijzen wij naar het
+    privacybeleid van Google:
+    <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.
+  </p>
+
+  <h2>3. Geen gebruikersaccounts</h2>
+  <p>
+    De app maakt geen gebruik van gebruikersaccounts. U hoeft zich niet te registreren of
+    in te loggen. Er wordt geen persoonlijk identificeerbare informatie door ons verzameld.
+  </p>
+
+  <h2>4. Externe diensten</h2>
+  <p>
+    De app maakt gebruik van de volgende externe diensten:
+  </p>
+  <ul>
+    <li>
+      <strong>Google Maps:</strong> Voor het weergeven van de kaart. Van toepassing is het
+      <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">privacybeleid van Google</a>.
+    </li>
+    <li>
+      <strong>Supabase:</strong> Voor het ophalen van content (locatieteksten, afbeeldingen en
+      audio), en voor de optionele backup van uw voortgang met een herstelcode (zie paragraaf 1).
+      Er worden geen persoonsgegevens naar Supabase verstuurd. Meer informatie:
+      <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>.
+    </li>
+    <li>
+      <strong>OpenRouteService:</strong> Voor het berekenen van wandelroutes. Er worden geen
+      persoonsgegevens verstuurd. Meer informatie:
+      <a href="https://openrouteservice.org/privacy-policy/" target="_blank" rel="noopener">openrouteservice.org/privacy-policy</a>.
+    </li>
+    <li>
+      <strong>Google AdMob:</strong> Zie paragraaf 2.
+    </li>
+  </ul>
+
+  <h2>5. Uw rechten (AVG/GDPR)</h2>
+  <p>
+    Op grond van de Algemene Verordening Gegevensbescherming (AVG) heeft u het recht op
+    inzage, correctie en verwijdering van uw gegevens. Omdat wij geen persoonsgegevens
+    opslaan, is er voor ons niets om in te zien of te verwijderen.
+  </p>
+  <p>
+    Gegevens die door Google AdMob zijn verzameld, vallen onder het privacybeleid van Google.
+    Voor verzoeken daarover kunt u terecht bij Google via
+    <a href="https://myaccount.google.com" target="_blank" rel="noopener">myaccount.google.com</a>.
+  </p>
+  <p>
+    Uw lokale app-gegevens (badges, bezoeken) kunt u zelf wissen via:
+    <em>Instellingen → Apps → Walk Through Time → Opslag → Gegevens wissen</em>.
+  </p>
+  <p>
+    Heeft u een backup met herstelcode aangemaakt en wilt u deze laten verwijderen? Stuur dan
+    een e-mail met uw herstelcode naar het adres in paragraaf 6 — wij verwijderen de bijbehorende
+    backup-rij dan handmatig. Zonder de code kunnen wij uw backup niet identificeren omdat er
+    geen koppeling is met u als persoon.
+  </p>
+
+  <h2>6. Contact</h2>
+  <p>
+    Heeft u vragen over dit privacybeleid? Neem dan contact op via:<br />
+    <a href="mailto:walkthroughtime0570@gmail.com">walkthroughtime0570@gmail.com</a>
+  </p>
+
+  <h2>7. Wijzigingen</h2>
+  <p>
+    Dit privacybeleid kan worden aangepast. De meest actuele versie is altijd beschikbaar
+    op deze pagina. Bij ingrijpende wijzigingen wordt u via de app op de hoogte gesteld.
+  </p>
+
+  <a class="back" href="index.html">&larr; Terug naar de homepage</a>
+  </main>
+
+</body>
+</html>
