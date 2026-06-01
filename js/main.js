@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
   nl: {
     'meta.title': 'Walk Through Time — Ontdek de verborgen geschiedenis van Deventer',
-    'meta.description': "Wandel door eeuwen geschiedenis in Deventer. Een audio-tour app met voor/na foto's, historische kaarten en 23 bijzondere locaties om te ontdekken.",
+    'meta.description': "Wandel door eeuwen geschiedenis in Deventer. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 23 bijzondere locaties om te ontdekken.",
 
     'nav.features': 'Functies',
     'nav.discover': 'Ontdek',
@@ -33,8 +33,8 @@ const translations = {
     'features.subtitle': 'Zes manieren om de rijke geschiedenis van Deventer te beleven, direct vanaf je telefoon.',
     'feature.audio.title': 'Audio-verhalen op locatie',
     'feature.audio.text': 'Elke plek heeft zijn eigen verteld verhaal. Doe je oortjes in, wandel door de stad en laat de geschiedenis tot je spreken — ook met je scherm uit. Een overkoepelende stadsgeschiedenis luister je als introductie.',
-    'feature.photo.title': 'Voor & na',
-    'feature.photo.text': "Schuif tussen oude prenten of foto's en de situatie van vandaag. Sommige locaties tonen meerdere paren uit verschillende tijdperken.",
+    'feature.photo.title': 'Het verleden tot leven',
+    'feature.photo.text': 'Schuif van een oude foto of prent naar een ingekleurde reconstructie en zie hoe een plek er vroeger werkelijk uitzag — alsof een tijdmachine je er middenin zet.',
     'feature.map.title': 'Historische kaarten',
     'feature.map.text': 'Leg eeuwenoude stadsplattegronden over de huidige kaart. Schakel zelf welke kaart je onder je voeten ziet verschijnen.',
     'feature.routes.title': 'Wandelroutes & navigatie',
@@ -44,11 +44,11 @@ const translations = {
     'feature.badges.title': 'Badges & voortgang',
     'feature.badges.text': 'Verzamel een badge bij elke bezochte locatie. Maak een herstelcode aan om je voortgang mee te nemen naar een ander toestel.',
 
-    'comparison.title': 'Zie het verschil',
-    'comparison.subtitle': 'Sleep de schuif om tussen verleden en heden te reizen.',
-    'comparison.before': 'Toen',
-    'comparison.after': 'Nu',
-    'comparison.caption': 'De Brink — Deventers historische marktplein door de eeuwen heen',
+    'comparison.title': 'Stap in het verleden',
+    'comparison.subtitle': 'Sleep de schuif van het originele archiefbeeld naar de ingekleurde reconstructie.',
+    'comparison.before': 'Origineel',
+    'comparison.after': 'Reconstructie',
+    'comparison.caption': 'De Brink — een eeuwenoud tafereel, opnieuw tot leven gewekt',
 
     'how.title': 'Hoe het werkt',
     'how.subtitle': 'In drie eenvoudige stappen begin je je reis door de tijd.',
@@ -84,7 +84,7 @@ const translations = {
 
   en: {
     'meta.title': "Walk Through Time — Discover Deventer's Hidden History",
-    'meta.description': 'Walk through centuries of history in Deventer. An audio tour app with then-and-now photo comparisons, historical maps, and 23 fascinating locations to discover.',
+    'meta.description': 'Walk through centuries of history in Deventer. An audio tour app with colour reconstructions of the past, historical maps, and 23 fascinating locations to discover.',
 
     'nav.features': 'Features',
     'nav.discover': 'Discover',
@@ -101,8 +101,8 @@ const translations = {
     'features.subtitle': "Six ways to experience Deventer's rich past, right from your phone.",
     'feature.audio.title': 'Audio stories on location',
     'feature.audio.text': 'Every place has its own narrated story. Put in your earbuds, walk through the city, and let history speak to you — even with your screen off. An overarching city history plays as an introduction.',
-    'feature.photo.title': 'Then & Now',
-    'feature.photo.text': 'Slide between historical prints or photographs and the present-day view. Some locations show multiple pairs from different eras.',
+    'feature.photo.title': 'The past brought to life',
+    'feature.photo.text': 'Slide from an old photo or print to a colour reconstruction and see how a place really looked back then — as if a time machine dropped you right into the scene.',
     'feature.map.title': 'Historical maps',
     'feature.map.text': "Lay centuries-old city maps over today's streets. Toggle which map appears beneath your feet as you explore.",
     'feature.routes.title': 'Routes & navigation',
@@ -112,11 +112,11 @@ const translations = {
     'feature.badges.title': 'Badges & progress',
     'feature.badges.text': 'Earn a badge for every location you visit. Create a recovery code to carry your progress over to another device.',
 
-    'comparison.title': 'See the Difference',
-    'comparison.subtitle': 'Drag the slider to travel between past and present.',
-    'comparison.before': 'Then',
-    'comparison.after': 'Now',
-    'comparison.caption': "De Brink — Deventer's historic market square through the ages",
+    'comparison.title': 'Step into the past',
+    'comparison.subtitle': 'Drag the slider from the original archive image to the colour reconstruction.',
+    'comparison.before': 'Original',
+    'comparison.after': 'Reconstruction',
+    'comparison.caption': 'De Brink — a centuries-old scene, brought back to life',
 
     'how.title': 'How It Works',
     'how.subtitle': 'Three simple steps to start your journey through time.',

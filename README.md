@@ -9,7 +9,7 @@ Pure HTML + CSS + vanilla JavaScript, geen build-stap.
 index.html            Landingspagina (tweetalig NL/EN via data-i18n)
 privacy-policy.html   Privacybeleid (zelfde inhoud als de store-versie)
 css/style.css         Alle styling (huisstijl van de app)
-js/main.js            Taalwissel + navigatie + voor/na-slider + aanmeldformulier
+js/main.js            Taalwissel + navigatie + reconstructie-slider + aanmeldformulier
 images/               Foto's, app-icon en og-image (social share-afbeelding)
 netlify.toml          Netlify-config (alleen nodig bij Git-deploy)
 ```
