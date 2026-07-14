@@ -6,13 +6,23 @@ Pure HTML + CSS + vanilla JavaScript, geen build-stap.
 ## Structuur
 
 ```
-index.html            Landingspagina (tweetalig NL/EN via data-i18n)
-privacy-policy.html   Privacybeleid (zelfde inhoud als de store-versie)
-css/style.css         Alle styling (huisstijl van de app)
-js/main.js            Taalwissel + navigatie + reconstructie-slider + aanmeldformulier
-images/               Foto's, app-icon en og-image (social share-afbeelding)
-netlify.toml          Netlify-config (alleen nodig bij Git-deploy)
+index.html                Landingspagina (tweetalig NL/EN via data-i18n)
+privacy-policy.html       Privacybeleid NL (zelfde inhoud als de store-versie)
+privacy-policy-en.html    Privacybeleid EN
+css/style.css             Alle styling (huisstijl van de app)
+js/main.js                Taalwissel + navigatie + reconstructie-slider + aanmeldformulier
+images/                   Foto's (.webp), app-icon, favicons, og-image
+images/screenshots/       App-screenshots (.webp) voor de "Zo ziet de app eruit"-sectie
+scripts/optimize-images.py  Resize + WebP-export + favicon-set (PIL). Zie kop in het bestand.
+robots.txt / sitemap.xml  SEO
+app-ads.txt               AdMob-autorisatie (publisher-ID)
+netlify.toml              Netlify-config (alleen nodig bij Git-deploy)
 ```
+
+> **Afbeeldingen wijzigen?** Leg het origineel in `images/` en draai
+> `python scripts/optimize-images.py` (of `--screenshots` voor de app-captures).
+> Het script maakt de lichte `.webp`-varianten die de pagina toont; de originele
+> JPG/PNG's blijven als bron staan.
 
 ## Lokaal bekijken
 
@@ -38,6 +48,8 @@ de Nederlandse standaard die getoond wordt vóór het script draait).
 Standaardtaal is Nederlands; de keuze van de bezoeker wordt onthouden in de browser.
 
 ## Deployen naar Netlify
+
+> 📋 **Volledige stap-voor-stap (GitHub → Netlify → eigen domein): zie [`DEPLOY.md`](DEPLOY.md).**
 
 Twee manieren — kies er één:
 
@@ -83,16 +95,20 @@ Wil je die 100 formulier-inzendingen vermijden: vervang het formulier door een `
 gebruik een gratis nieuwsbrief-dienst (Buttondown ~100 abonnees, Mailchimp ~500 contacten).
 Limieten zoals bekend begin 2026 — check de actuele <https://www.netlify.com/pricing/>.
 
-## ⚠️ Privacy-URL afstemmen met de app-stores
+## ⚠️ Privacy-URL: blijft (voorlopig) op de netlify-subdomein
 
-De Play Store en App Store gebruiken nu `https://walkthroughtime.netlify.app/privacy-policy.html`
-als verplichte privacy-URL. Deze site bevat óók een `privacy-policy.html`. Kies één van twee:
+**Beslissing (juli 2026):** deze marketingsite komt op **`walkthrough-time.com`**, maar de
+**privacy-URL van de stores blijft `https://walkthroughtime.netlify.app/`** (de root serveert daar
+het privacybeleid als `index.html`, en beide stores + AdMob linken daarnaartoe). Die netlify-host
+**niet aanraken/overschrijven** met deze site.
 
-- **Houd** de bestaande `walkthroughtime.netlify.app`-pagina in de lucht (uit de app-repo `site/`-map), **of**
-- **Werk de privacy-URL bij** naar `https://walkthrough-time.com/privacy-policy.html` in Play Console
-  (Beleid → App-content → Privacybeleid) én in App Store Connect.
+- **iOS** — de privacy-URL (en Marketing-URL) in App Store Connect zijn **vergrendeld zolang de app
+  live is**; pas te wijzigen bij een nieuwe versie. Dus voorlopig blijft iOS naar de netlify-URL wijzen.
+- **Play** — het privacy-veld is wél altijd aanpasbaar. Optioneel later ompunten naar
+  `https://walkthrough-time.com/privacy-policy.html` (Play Console → Beleid → App-content → Privacybeleid).
 
-Laat de oude URL niet doodlopen zolang die in een store-listing staat.
+Deze site draagt zijn eigen `privacy-policy.html` + `app-ads.txt` al mee, dus zo'n migratie kan later
+zonder herwerk. Tot die tijd: laat de netlify-URL gewoon in de lucht.
 
 ## Losse eindjes / opties
 
@@ -102,6 +118,7 @@ Laat de oude URL niet doodlopen zolang die in een store-listing staat.
 - **og-image** (`images/og-image.jpg`, de afbeelding die je in WhatsApp/social ziet): afgeleid van de
   feature graphic van de app. Opnieuw genereren? Pas de bron aan in
   `deventer-tijdreis/scripts/generate-feature-graphic.py` en zet 'm via PIL om naar 1200×630.
-- **Store-knoppen** staan op "Binnenkort" tot de app publiek is. Zodra dat zo is: in `index.html` de
-  twee `<span class="store-btn is-soon">` vervangen door `<a href="STORE-URL" class="store-btn">` en
-  de "Binnenkort op"-labels weghalen.
+- **Store-knoppen** zijn **live** (juli 2026): echte links naar de App Store
+  (`apps.apple.com/app/id6764508617`) en Google Play
+  (`play.google.com/store/apps/details?id=com.jouwgeschiedenis.deventertijdreis`). De CTA heeft nu de
+  download-knoppen als hoofd-actie, met daaronder een kleine nieuwsbrief-opt-in voor nieuwe steden.

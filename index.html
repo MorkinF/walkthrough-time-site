@@ -6,19 +6,62 @@
   <title>Walk Through Time — Ontdek de verborgen geschiedenis van Deventer</title>
   <meta name="description" content="Wandel door eeuwen geschiedenis in Deventer. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 23 bijzondere locaties om te ontdekken.">
   <meta name="theme-color" content="#2D4059">
+  <link rel="canonical" href="https://walkthrough-time.com/">
 
   <!-- Open Graph -->
+  <meta property="og:site_name" content="Walk Through Time">
   <meta property="og:title" content="Walk Through Time — Ontdek de verborgen geschiedenis van Deventer">
   <meta property="og:description" content="Stap terug in de tijd. Verken 23 historische locaties met audio-verhalen, ingekleurde reconstructies en eeuwenoude kaarten.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://walkthrough-time.com">
+  <meta property="og:url" content="https://walkthrough-time.com/">
   <meta property="og:image" content="https://walkthrough-time.com/images/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Walk Through Time — audio-wandeling door historisch Deventer">
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:locale:alternate" content="en_US">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Walk Through Time — Ontdek de verborgen geschiedenis van Deventer">
+  <meta name="twitter:description" content="Stap terug in de tijd. Verken 23 historische locaties met audio-verhalen, ingekleurde reconstructies en eeuwenoude kaarten.">
+  <meta name="twitter:image" content="https://walkthrough-time.com/images/og-image.jpg">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="images/icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16.png">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
 
   <!-- Styles -->
   <link rel="stylesheet" href="css/style.css">
+
+  <!-- Structured data (helpt Google de app-vermelding te begrijpen) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "MobileApplication",
+    "name": "Walk Through Time",
+    "operatingSystem": "iOS, Android",
+    "applicationCategory": "TravelApplication",
+    "url": "https://walkthrough-time.com/",
+    "description": "Audio-wandeling door de verborgen geschiedenis van Deventer: verhalen op locatie, ingekleurde reconstructies en historische kaarten.",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "EUR"
+    },
+    "downloadUrl": [
+      "https://apps.apple.com/app/id6764508617",
+      "https://play.google.com/store/apps/details?id=com.jouwgeschiedenis.deventertijdreis"
+    ],
+    "author": {
+      "@type": "Organization",
+      "name": "Walk Through Time",
+      "url": "https://walkthrough-time.com/",
+      "email": "walkthroughtime0570@gmail.com"
+    }
+  }
+  </script>
 </head>
 <body>
 
@@ -26,14 +69,15 @@
   <nav class="nav">
     <div class="container nav-inner">
       <a href="#" class="nav-logo">
-        <img src="images/icon.png" alt="Walk Through Time" width="36" height="36">
+        <img src="images/icon-96.png" alt="Walk Through Time" width="36" height="36">
         Walk Through Time
       </a>
       <ul class="nav-links">
         <li><a href="#features" data-i18n="nav.features">Functies</a></li>
         <li><a href="#discover" data-i18n="nav.discover">Ontdek</a></li>
+        <li><a href="#app" data-i18n="nav.app">De app</a></li>
         <li><a href="#locations" data-i18n="nav.locations">Locaties</a></li>
-        <li><a href="#download" class="nav-cta" data-i18n="nav.cta">Hou me op de hoogte</a></li>
+        <li><a href="#download" class="nav-cta" data-i18n="nav.cta">Download</a></li>
         <li class="lang-switch" aria-label="Taal / Language">
           <button type="button" class="lang-btn" data-lang="nl">NL</button>
           <span class="lang-sep">/</span>
@@ -51,7 +95,7 @@
     <div class="hero-bg"></div>
     <div class="hero-overlay"></div>
     <div class="hero-content">
-      <div class="hero-badge" data-i18n="hero.badge">Gratis audio-wandeling</div>
+      <div class="hero-badge" data-i18n="hero.badge">Nu gratis in de App Store &amp; Google Play</div>
       <h1 data-i18n-html="hero.title">Wandel door de <span>tijd</span></h1>
       <p class="hero-text" data-i18n="hero.text">
         Ontdek eeuwen geschiedenis, verborgen in de straten van Deventer.
@@ -59,7 +103,7 @@
         zoals die er lang geleden uitzag.
       </p>
       <div class="hero-actions">
-        <a href="#download" class="btn btn-primary" data-i18n="hero.cta_primary">Binnenkort beschikbaar</a>
+        <a href="#download" class="btn btn-primary" data-i18n="hero.cta_primary">Download gratis</a>
         <a href="#discover" class="btn btn-outline" data-i18n="hero.cta_secondary">Bekijk hoe het werkt</a>
       </div>
     </div>
@@ -137,17 +181,53 @@
       <p class="section-subtitle fade-up" data-i18n="comparison.subtitle">Sleep de schuif van het originele archiefbeeld naar de ingekleurde reconstructie.</p>
 
       <div class="comparison-wrapper fade-up">
-        <img src="images/brink_original.jpg" alt="De Brink — origineel archiefbeeld" class="comparison-img-before">
-        <img src="images/brink_restored.png" alt="De Brink — ingekleurde reconstructie" class="comparison-img-after">
+        <img src="images/brink_original.webp" alt="De Brink — origineel archiefbeeld" class="comparison-img-before" width="1600" height="1032">
+        <img src="images/brink_restored.webp" alt="De Brink — ingekleurde reconstructie" class="comparison-img-after" width="1280" height="832">
         <div class="comparison-slider">
-          <div class="comparison-handle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
+          <div class="comparison-handle" role="slider" tabindex="0"
+               aria-label="Vergelijk voor en na" data-i18n-aria-label="comparison.slider_aria"
+               aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="15 18 9 12 15 6"/><polyline points="9 18 15 12 9 6" transform="translate(6,0)"/></svg>
           </div>
         </div>
         <span class="comparison-label before" data-i18n="comparison.before">Origineel</span>
         <span class="comparison-label after" data-i18n="comparison.after">Reconstructie</span>
       </div>
       <p class="comparison-caption fade-up" data-i18n="comparison.caption">De Brink — een eeuwenoud tafereel, opnieuw tot leven gewekt</p>
+    </div>
+  </section>
+
+  <!-- ======== App Screenshots ======== -->
+  <section class="screenshots" id="app">
+    <div class="container">
+      <h2 class="section-title fade-up" data-i18n="screens.title">Zo ziet de app eruit</h2>
+      <p class="section-subtitle fade-up" data-i18n="screens.subtitle">Een kijkje in Walk Through Time — van interactieve kaart tot audio en badges.</p>
+    </div>
+    <div class="screens-scroller fade-up">
+      <figure class="phone">
+        <div class="phone-frame"><img src="images/screenshots/01-map.webp" alt="" loading="lazy" width="600" height="1300"></div>
+        <figcaption data-i18n="screens.map">Ontdek verhalen om je heen</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="phone-frame"><img src="images/screenshots/02-compare.webp" alt="" loading="lazy" width="600" height="1300"></div>
+        <figcaption data-i18n="screens.compare">Schuif tussen toen en nu</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="phone-frame"><img src="images/screenshots/03-audio.webp" alt="" loading="lazy" width="600" height="1300"></div>
+        <figcaption data-i18n="screens.audio">Luister ter plekke</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="phone-frame"><img src="images/screenshots/04-overlay.webp" alt="" loading="lazy" width="600" height="1300"></div>
+        <figcaption data-i18n="screens.overlay">Leg het verleden over het heden</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="phone-frame"><img src="images/screenshots/05-routes.webp" alt="" loading="lazy" width="600" height="1300"></div>
+        <figcaption data-i18n="screens.routes">Volg kant-en-klare routes</figcaption>
+      </figure>
+      <figure class="phone">
+        <div class="phone-frame"><img src="images/screenshots/06-badges.webp" alt="" loading="lazy" width="600" height="1300"></div>
+        <figcaption data-i18n="screens.badges">Verzamel badges onderweg</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -163,7 +243,7 @@
             <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--primary)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
           </div>
           <h3 data-i18n="step.download.title">Download</h3>
-          <p data-i18n="step.download.text">Haal straks de gratis app op en ga naar het centrum van Deventer. Werkt het best op locatie — maar verkennen vanuit huis kan ook.</p>
+          <p data-i18n="step.download.text">Download de gratis app en ga naar het centrum van Deventer. Werkt het best op locatie — maar verkennen vanuit huis kan ook.</p>
         </div>
         <div class="step fade-up">
           <div class="step-number">
@@ -191,21 +271,21 @@
 
       <div class="locations-preview">
         <div class="location-card fade-up">
-          <img src="images/waag_original.jpg" alt="De Waag" loading="lazy">
+          <img src="images/waag_original.webp" alt="De Waag" loading="lazy" width="900" height="574">
           <div class="location-card-overlay">
             <h3>De Waag</h3>
             <p data-i18n="locations.waag">Waaggebouw, 1528</p>
           </div>
         </div>
         <div class="location-card fade-up">
-          <img src="images/lebuinuskerk_original.jpg" alt="Lebuïnuskerk" loading="lazy">
+          <img src="images/lebuinuskerk_original.webp" alt="Lebuïnuskerk" loading="lazy" width="900" height="627">
           <div class="location-card-overlay">
             <h3>Lebuïnuskerk</h3>
             <p data-i18n="locations.lebuinus">Gesticht in de 8e eeuw</p>
           </div>
         </div>
         <div class="location-card fade-up">
-          <img src="images/deventer-1899.png" alt="Historische kaart van Deventer" loading="lazy">
+          <img src="images/deventer-1899.webp" alt="Historische kaart van Deventer" loading="lazy" width="1600" height="732">
           <div class="location-card-overlay">
             <h3 data-i18n="locations.more_title">En nog 20 meer…</h3>
             <p data-i18n="locations.more_sub">Download om ze allemaal te ontdekken</p>
@@ -223,36 +303,43 @@
   <!-- ======== CTA / Download ======== -->
   <section class="cta" id="download">
     <div class="container cta-content">
-      <h2 class="fade-up" data-i18n="cta.title">Klaar om terug in de tijd te stappen?</h2>
-      <p class="fade-up" data-i18n="cta.text">De app is bijna klaar. Laat je e-mail achter en we laten het je weten zodra Walk Through Time in de stores verschijnt.</p>
-
-      <!-- Aanmeldformulier (Netlify Forms) -->
-      <form name="signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form fade-up">
-        <input type="hidden" name="form-name" value="signup">
-        <p class="signup-hp"><label>Niet invullen: <input name="bot-field"></label></p>
-        <input type="email" name="email" class="signup-input" required
-               placeholder="jouw@email.nl" data-i18n-placeholder="form.placeholder"
-               autocomplete="email">
-        <button type="submit" class="btn btn-primary" data-i18n="form.button">Hou me op de hoogte</button>
-      </form>
-      <p class="signup-message" role="status" aria-live="polite" hidden></p>
-      <p class="signup-note fade-up" data-i18n="form.note">We gebruiken je e-mail alleen om je te laten weten dat de app live is — niets anders.</p>
+      <h2 class="fade-up" data-i18n="cta.title">Nu gratis te downloaden</h2>
+      <p class="fade-up" data-i18n="cta.text">Walk Through Time staat live in de App Store en Google Play. Download gratis en stap terug in de tijd.</p>
 
       <div class="store-buttons fade-up">
-        <span class="store-btn is-soon" aria-disabled="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 3.458L16.8 9.79l-2.302 2.302L5.864 3.458z"/></svg>
+        <a href="https://apps.apple.com/app/id6764508617" class="store-btn" target="_blank" rel="noopener"
+           data-i18n-aria-label="store.apple_aria" aria-label="Download in de App Store">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
           <div class="store-label">
-            <small data-i18n="store.soon">Binnenkort op</small>
-            <strong>Google Play</strong>
-          </div>
-        </span>
-        <span class="store-btn is-soon" aria-disabled="true">
-          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-          <div class="store-label">
-            <small data-i18n="store.soon">Binnenkort op</small>
+            <small data-i18n="store.apple_small">Download in de</small>
             <strong>App Store</strong>
           </div>
-        </span>
+        </a>
+        <a href="https://play.google.com/store/apps/details?id=com.jouwgeschiedenis.deventertijdreis" class="store-btn" target="_blank" rel="noopener"
+           data-i18n-aria-label="store.google_aria" aria-label="Ontdek het op Google Play">
+          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 3.458L16.8 9.79l-2.302 2.302L5.864 3.458z"/></svg>
+          <div class="store-label">
+            <small data-i18n="store.google_small">Ontdek het op</small>
+            <strong>Google Play</strong>
+          </div>
+        </a>
+      </div>
+
+      <!-- Nieuwsbrief: updates over nieuwe steden (Netlify Forms) -->
+      <div class="newsletter fade-up">
+        <h3 data-i18n="newsletter.title">Blijf op de hoogte van nieuwe steden</h3>
+        <p class="newsletter-text" data-i18n="newsletter.text">Deventer is nog maar het begin — Zutphen en meer steden volgen. Laat je e-mail achter, dan laten we het je weten.</p>
+
+        <form name="signup" method="POST" data-netlify="true" netlify-honeypot="bot-field" class="signup-form">
+          <input type="hidden" name="form-name" value="signup">
+          <p class="signup-hp"><label>Niet invullen: <input name="bot-field"></label></p>
+          <input type="email" name="email" class="signup-input" required
+                 placeholder="jouw@email.nl" data-i18n-placeholder="form.placeholder"
+                 autocomplete="email">
+          <button type="submit" class="btn btn-primary" data-i18n="form.button">Hou me op de hoogte</button>
+        </form>
+        <p class="signup-message" role="status" aria-live="polite" hidden></p>
+        <p class="signup-note" data-i18n="form.note">We gebruiken je e-mail alleen voor nieuws over nieuwe steden — niets anders.</p>
       </div>
     </div>
   </section>
@@ -261,7 +348,7 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-brand">
-        <img src="images/icon.png" alt="" width="28" height="28">
+        <img src="images/icon-96.png" alt="" width="28" height="28">
         Walk Through Time &copy; 2026
       </div>
       <ul class="footer-links">

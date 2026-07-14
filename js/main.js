@@ -20,13 +20,14 @@ const translations = {
 
     'nav.features': 'Functies',
     'nav.discover': 'Ontdek',
+    'nav.app': 'De app',
     'nav.locations': 'Locaties',
-    'nav.cta': 'Hou me op de hoogte',
+    'nav.cta': 'Download',
 
-    'hero.badge': 'Gratis audio-wandeling',
+    'hero.badge': 'Nu gratis in de App Store & Google Play',
     'hero.title': 'Wandel door de <span>tijd</span>',
     'hero.text': 'Ontdek eeuwen geschiedenis, verborgen in de straten van Deventer. Luister naar verhalen, vergelijk verleden en heden, en zie de stad zoals die er lang geleden uitzag.',
-    'hero.cta_primary': 'Binnenkort beschikbaar',
+    'hero.cta_primary': 'Download gratis',
     'hero.cta_secondary': 'Bekijk hoe het werkt',
 
     'features.title': 'Geschiedenis komt tot leven',
@@ -49,11 +50,21 @@ const translations = {
     'comparison.before': 'Origineel',
     'comparison.after': 'Reconstructie',
     'comparison.caption': 'De Brink — een eeuwenoud tafereel, opnieuw tot leven gewekt',
+    'comparison.slider_aria': 'Schuif om voor en na te vergelijken',
+
+    'screens.title': 'Zo ziet de app eruit',
+    'screens.subtitle': 'Een kijkje in Walk Through Time — van interactieve kaart tot audio en badges.',
+    'screens.map': 'Ontdek verhalen om je heen',
+    'screens.compare': 'Schuif tussen toen en nu',
+    'screens.audio': 'Luister ter plekke',
+    'screens.overlay': 'Leg het verleden over het heden',
+    'screens.routes': 'Volg kant-en-klare routes',
+    'screens.badges': 'Verzamel badges onderweg',
 
     'how.title': 'Hoe het werkt',
     'how.subtitle': 'In drie eenvoudige stappen begin je je reis door de tijd.',
     'step.download.title': 'Download',
-    'step.download.text': 'Haal straks de gratis app op en ga naar het centrum van Deventer. Werkt het best op locatie — maar verkennen vanuit huis kan ook.',
+    'step.download.text': 'Download de gratis app en ga naar het centrum van Deventer. Werkt het best op locatie — maar verkennen vanuit huis kan ook.',
     'step.explore.title': 'Verken',
     'step.explore.text': 'De app merkt wanneer je in de buurt van een historische plek bent. Wandel op je eigen tempo — er is geen vaste route.',
     'step.discover.title': 'Ontdek',
@@ -68,14 +79,19 @@ const translations = {
     'locations.more': 'Van de <span>Brink</span> tot het <span>Bergkwartier</span> — een wandeling door 1000 jaar geschiedenis.',
     'locations.multicity': 'Beginnend in Deventer — meer steden volgen.',
 
-    'cta.title': 'Klaar om terug in de tijd te stappen?',
-    'cta.text': 'De app is bijna klaar. Laat je e-mail achter en we laten het je weten zodra Walk Through Time in de stores verschijnt.',
+    'cta.title': 'Nu gratis te downloaden',
+    'cta.text': 'Walk Through Time staat live in de App Store en Google Play. Download gratis en stap terug in de tijd.',
+    'store.apple_small': 'Download in de',
+    'store.apple_aria': 'Download Walk Through Time in de App Store',
+    'store.google_small': 'Ontdek het op',
+    'store.google_aria': 'Ontdek Walk Through Time op Google Play',
+    'newsletter.title': 'Blijf op de hoogte van nieuwe steden',
+    'newsletter.text': 'Deventer is nog maar het begin — Zutphen en meer steden volgen. Laat je e-mail achter, dan laten we het je weten.',
     'form.placeholder': 'jouw@email.nl',
     'form.button': 'Hou me op de hoogte',
-    'form.note': 'We gebruiken je e-mail alleen om je te laten weten dat de app live is — niets anders.',
-    'form.success': 'Bedankt! We mailen je zodra de app live is.',
+    'form.note': 'We gebruiken je e-mail alleen voor nieuws over nieuwe steden — niets anders.',
+    'form.success': 'Bedankt! We laten het je weten zodra er een nieuwe stad live is.',
     'form.error': 'Er ging iets mis. Mail ons gerust op walkthroughtime0570@gmail.com.',
-    'store.soon': 'Binnenkort op',
 
     'footer.privacy': 'Privacybeleid',
     'footer.privacy_href': 'privacy-policy.html',
@@ -88,13 +104,14 @@ const translations = {
 
     'nav.features': 'Features',
     'nav.discover': 'Discover',
+    'nav.app': 'The app',
     'nav.locations': 'Locations',
-    'nav.cta': 'Get notified',
+    'nav.cta': 'Download',
 
-    'hero.badge': 'Free audio tour app',
+    'hero.badge': 'Now free on the App Store & Google Play',
     'hero.title': 'Walk Through <span>Time</span>',
     'hero.text': 'Discover centuries of history hidden in the streets of Deventer. Listen to stories, compare past and present, and see the city as it once was.',
-    'hero.cta_primary': 'Coming soon',
+    'hero.cta_primary': 'Download free',
     'hero.cta_secondary': 'See how it works',
 
     'features.title': 'History Comes Alive',
@@ -117,11 +134,21 @@ const translations = {
     'comparison.before': 'Original',
     'comparison.after': 'Reconstruction',
     'comparison.caption': 'De Brink — a centuries-old scene, brought back to life',
+    'comparison.slider_aria': 'Slide to compare before and after',
+
+    'screens.title': 'A Look Inside the App',
+    'screens.subtitle': 'A peek at Walk Through Time — from interactive map to audio and badges.',
+    'screens.map': 'Discover stories around you',
+    'screens.compare': 'Slide between then and now',
+    'screens.audio': 'Listen on the spot',
+    'screens.overlay': 'Lay the past over the present',
+    'screens.routes': 'Follow ready-made routes',
+    'screens.badges': 'Collect badges as you go',
 
     'how.title': 'How It Works',
     'how.subtitle': 'Three simple steps to start your journey through time.',
     'step.download.title': 'Download',
-    'step.download.text': "Soon you'll grab the free app and head to Deventer's city center. Works best on location — but feel free to explore from home too.",
+    'step.download.text': "Download the free app and head to Deventer's city center. Works best on location — but feel free to explore from home too.",
     'step.explore.title': 'Explore',
     'step.explore.text': "The app detects when you're near a historic site. Walk at your own pace — there's no fixed route.",
     'step.discover.title': 'Discover',
@@ -136,14 +163,19 @@ const translations = {
     'locations.more': 'From the <span>Brink</span> to the <span>Bergkwartier</span> — a walk through 1000 years of history.',
     'locations.multicity': 'Starting in Deventer — more cities coming soon.',
 
-    'cta.title': 'Ready to Step Back in Time?',
-    'cta.text': "The app is almost ready. Leave your email and we'll let you know the moment Walk Through Time hits the stores.",
+    'cta.title': 'Free to Download Now',
+    'cta.text': 'Walk Through Time is live on the App Store and Google Play. Download it free and step back in time.',
+    'store.apple_small': 'Download on the',
+    'store.apple_aria': 'Download Walk Through Time on the App Store',
+    'store.google_small': 'Get it on',
+    'store.google_aria': 'Get Walk Through Time on Google Play',
+    'newsletter.title': 'Stay posted on new cities',
+    'newsletter.text': "Deventer is just the beginning — Zutphen and more cities are on the way. Leave your email and we'll let you know.",
     'form.placeholder': 'you@email.com',
     'form.button': 'Notify me',
-    'form.note': "We'll only use your email to let you know the app is live — nothing else.",
-    'form.success': "Thanks! We'll email you when the app goes live.",
+    'form.note': "We'll only use your email for news about new cities — nothing else.",
+    'form.success': "Thanks! We'll let you know as soon as a new city goes live.",
     'form.error': 'Something went wrong. Feel free to email us at walkthroughtime0570@gmail.com.',
-    'store.soon': 'Coming soon to',
 
     'footer.privacy': 'Privacy Policy',
     'footer.privacy_href': 'privacy-policy-en.html',
@@ -196,6 +228,12 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n-href]').forEach(el => {
     const value = dict[el.dataset.i18nHref];
     if (value !== undefined) el.setAttribute('href', value);
+  });
+
+  // Accessible names that need translating (e.g. the store links)
+  document.querySelectorAll('[data-i18n-aria-label]').forEach(el => {
+    const value = dict[el.dataset.i18nAriaLabel];
+    if (value !== undefined) el.setAttribute('aria-label', value);
   });
 
   // Document <title> + meta description
@@ -275,28 +313,36 @@ function initImageComparison() {
 
   const beforeImg = wrapper.querySelector('.comparison-img-before');
   const slider = wrapper.querySelector('.comparison-slider');
+  const handle = wrapper.querySelector('.comparison-handle');
+  let pct = 50;
   let isDragging = false;
 
-  function updatePosition(x) {
-    const rect = wrapper.getBoundingClientRect();
-    let pct = ((x - rect.left) / rect.width) * 100;
-    pct = Math.max(0, Math.min(100, pct));
+  // Single source of truth: set the reveal percentage and reflect it
+  // in the visuals + ARIA so mouse, touch and keyboard all agree.
+  function setPct(value) {
+    pct = Math.max(0, Math.min(100, value));
     beforeImg.style.clipPath = `inset(0 ${100 - pct}% 0 0)`;
     slider.style.left = pct + '%';
+    if (handle) handle.setAttribute('aria-valuenow', Math.round(pct));
+  }
+
+  function setFromX(x) {
+    const rect = wrapper.getBoundingClientRect();
+    setPct(((x - rect.left) / rect.width) * 100);
   }
 
   // Mouse: start on wrapper, track & release on document so dragging
   // continues even when the cursor leaves the image area
   wrapper.addEventListener('mousedown', (e) => {
     isDragging = true;
-    updatePosition(e.clientX);
+    setFromX(e.clientX);
     e.preventDefault();
   });
 
   document.addEventListener('mousemove', (e) => {
     if (!isDragging) return;
     e.preventDefault();
-    updatePosition(e.clientX);
+    setFromX(e.clientX);
   });
 
   document.addEventListener('mouseup', () => {
@@ -306,17 +352,35 @@ function initImageComparison() {
   // Touch: same pattern — start on wrapper, track on document
   wrapper.addEventListener('touchstart', (e) => {
     isDragging = true;
-    updatePosition(e.touches[0].clientX);
+    setFromX(e.touches[0].clientX);
   }, { passive: true });
 
   document.addEventListener('touchmove', (e) => {
     if (!isDragging) return;
-    updatePosition(e.touches[0].clientX);
+    setFromX(e.touches[0].clientX);
   }, { passive: true });
 
   document.addEventListener('touchend', () => {
     isDragging = false;
   });
+
+  // Keyboard: arrows nudge, Home/End jump to the extremes
+  if (handle) {
+    handle.addEventListener('keydown', (e) => {
+      const step = e.shiftKey ? 10 : 2;
+      let handled = true;
+      switch (e.key) {
+        case 'ArrowLeft':
+        case 'ArrowDown': setPct(pct - step); break;
+        case 'ArrowRight':
+        case 'ArrowUp': setPct(pct + step); break;
+        case 'Home': setPct(0); break;
+        case 'End': setPct(100); break;
+        default: handled = false;
+      }
+      if (handled) e.preventDefault();
+    });
+  }
 }
 
 /* ============================================
