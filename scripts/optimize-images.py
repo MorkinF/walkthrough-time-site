@@ -28,11 +28,22 @@ IMAGES = os.path.join(HERE, "..", "images")
 # _restored-varianten slaan we over.
 CONTENT = [
     # Comparison-slider (getoond tot ~720px breed, retina -> 1600 is ruim).
+    # De 1750-gravure heeft veel fijne lijndetails -> comprimeert zwaar; 1200px/q78
+    # houdt 'm scherp genoeg voor de ~720px-slider zonder een dik bestand.
+    ("grotekerkhof_original.jpg", "grotekerkhof_original.webp", 1200, 78),
+    ("grotekerkhof_restored.png", "grotekerkhof_restored.webp", 1600, 82),
+    # Berkelpoort (Zutphen) — foto-reconstructie, tweede slider.
+    ("berkelpoort_original.jpg", "berkelpoort_original.webp", 1400, 82),
+    ("berkelpoort_restored.png", "berkelpoort_restored.webp", 1400, 82),
+    # (brink blijft als bron staan maar wordt niet meer op de pagina getoond)
     ("brink_original.jpg", "brink_original.webp", 1600, 82),
     ("brink_restored.png", "brink_restored.webp", 1600, 82),
     # Locatiekaarten (getoond ~340px, aspect 3/4 -> 900 dekt retina).
     ("waag_original.jpg", "waag_original.webp", 900, 82),
     ("lebuinuskerk_original.jpg", "lebuinuskerk_original.webp", 900, 82),
+    ("drieharingen_original.jpg", "drieharingen_original.webp", 900, 82),
+    ("walburgiskerk_original.jpg", "walburgiskerk_original.webp", 900, 82),
+    ("drogenapstoren_original.jpg", "drogenapstoren_original.webp", 900, 82),
     # Hero-achtergrond (background-size 150%) + locatiekaart -> grotere bron.
     ("deventer-1899.png", "deventer-1899.webp", 1600, 82),
 ]
@@ -52,14 +63,16 @@ APP_REPO_RAW = os.path.join(
     HERE, "..", "..", "deventer-tijdreis", "assets", "store", "screenshots-raw"
 )
 SCREENSHOTS = [
-    # (bronbestand in screenshots-raw/, output-naam). Mapping uit de app-repo
-    # generate-screenshots.py SHOTS-lijst. Zes sterke, representatieve schermen.
-    ("Screenshot_20260610_114643_Walk Through Time.jpg", "01-map.webp"),      # kaart + locaties
-    ("Screenshot_20260610_114822_Walk Through Time.jpg", "02-compare.webp"),  # voor/na-slider
-    ("Screenshot_20260610_114844_Walk Through Time.jpg", "03-audio.webp"),    # audio-speler
-    ("Screenshot_20260610_114638_Walk Through Time.jpg", "04-overlay.webp"),  # historische overlay
-    ("Screenshot_20260610_114459_Walk Through Time.jpg", "05-routes.webp"),   # wandelroutes
-    ("Screenshot_20260610_111402_Walk Through Time.jpg", "06-badges.webp"),   # badges
+    # (bronbestand in screenshots-raw/, output-naam). Volgorde = exact die van de
+    # Play Store-listing (= de gebrande 01-08 uit de app-repo generate-screenshots.py).
+    ("Screenshot_20260610_114643_Walk Through Time.jpg", "01-map.webp"),          # kaart + locaties
+    ("Screenshot_20260610_114822_Walk Through Time.jpg", "02-compare.webp"),      # voor/na-slider
+    ("Screenshot_20260610_114844_Walk Through Time.jpg", "03-audio.webp"),        # audio-speler
+    ("Screenshot_20260610_114638_Walk Through Time.jpg", "04-overlay.webp"),      # historische overlay
+    ("Screenshot_20260610_114430_Walk Through Time.jpg", "05-city.webp"),         # stadsgeschiedenis
+    ("Screenshot_20260610_114459_Walk Through Time.jpg", "06-routes.webp"),       # wandelroutes
+    ("Screenshot_20260610_114526_Walk Through Time.jpg", "07-route-detail.webp"), # route-detail
+    ("Screenshot_20260610_111402_Walk Through Time.jpg", "08-badges.webp"),       # badges
 ]
 
 

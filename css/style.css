@@ -218,9 +218,15 @@ section {
   inset: 0;
   background-image: url('../images/deventer-1899.webp');
   background-position: center top;
-  background-size: 150%;
+  /* De plattegrond is een onregelmatig gevormde tekening op transparante
+     achtergrond. Door op HOOGTE te schalen (i.p.v. een vaste breedte) valt de
+     schuine onderrand — net als op een groot scherm — altijd nét onder de
+     zichtbare banner, óók op smalle/mobiele schermen. Zo is er nergens een
+     harde afgeknipte rand. */
+  background-size: auto 120%;
   background-repeat: no-repeat;
   opacity: 1;
+  /* Bovenrand van de kaart wegvloeien in het blauw. */
   mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
   -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 60%);
 }
@@ -516,6 +522,26 @@ section {
   margin-top: 1.25rem;
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.875rem;
+}
+
+/* Twee sliders naast elkaar (schets- én foto-reconstructie) */
+.comparison-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  align-items: start;
+}
+
+.comparison-item {
+  margin: 0;
+}
+
+/* Binnen het raster vult elke slider zijn eigen kolom */
+.comparison-item .comparison-wrapper {
+  max-width: none;
+  margin: 0;
 }
 
 /* ============================================
@@ -931,6 +957,11 @@ section {
 
   .hero-text {
     font-size: 1rem;
+  }
+
+  .comparison-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
   }
 
   .comparison-wrapper {

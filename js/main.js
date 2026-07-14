@@ -15,8 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
    ============================================ */
 const translations = {
   nl: {
-    'meta.title': 'Walk Through Time — Ontdek de verborgen geschiedenis van Deventer',
-    'meta.description': "Wandel door eeuwen geschiedenis in Deventer. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 23 bijzondere locaties om te ontdekken.",
+    'meta.title': 'Walk Through Time — Ontdek de verborgen geschiedenis van je stad',
+    'meta.description': "Wandel door eeuwen geschiedenis in historische Nederlandse steden. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 31 locaties in Deventer en Zutphen — meer steden volgen.",
 
     'nav.features': 'Functies',
     'nav.discover': 'Ontdek',
@@ -26,12 +26,12 @@ const translations = {
 
     'hero.badge': 'Nu gratis in de App Store & Google Play',
     'hero.title': 'Wandel door de <span>tijd</span>',
-    'hero.text': 'Ontdek eeuwen geschiedenis, verborgen in de straten van Deventer. Luister naar verhalen, vergelijk verleden en heden, en zie de stad zoals die er lang geleden uitzag.',
+    'hero.text': 'Ontdek eeuwen geschiedenis, verborgen in de straten om je heen. Luister naar verhalen, vergelijk verleden en heden, en zie de stad zoals die er lang geleden uitzag.',
     'hero.cta_primary': 'Download gratis',
     'hero.cta_secondary': 'Bekijk hoe het werkt',
 
     'features.title': 'Geschiedenis komt tot leven',
-    'features.subtitle': 'Zes manieren om de rijke geschiedenis van Deventer te beleven, direct vanaf je telefoon.',
+    'features.subtitle': 'Zes manieren om de rijke geschiedenis van een stad te beleven, direct vanaf je telefoon.',
     'feature.audio.title': 'Audio-verhalen op locatie',
     'feature.audio.text': 'Elke plek heeft zijn eigen verteld verhaal. Doe je oortjes in, wandel door de stad en laat de geschiedenis tot je spreken — ook met je scherm uit. Een overkoepelende stadsgeschiedenis luister je als introductie.',
     'feature.photo.title': 'Het verleden tot leven',
@@ -49,7 +49,8 @@ const translations = {
     'comparison.subtitle': 'Sleep de schuif van het originele archiefbeeld naar de ingekleurde reconstructie.',
     'comparison.before': 'Origineel',
     'comparison.after': 'Reconstructie',
-    'comparison.caption': 'De Brink — een eeuwenoud tafereel, opnieuw tot leven gewekt',
+    'comparison.caption': 'Grote Kerkhof, Deventer — een gravure uit circa 1750, opnieuw tot leven gewekt',
+    'comparison.caption2': 'Berkelpoort, Zutphen — een oude foto opnieuw ingekleurd',
     'comparison.slider_aria': 'Schuif om voor en na te vergelijken',
 
     'screens.title': 'Zo ziet de app eruit',
@@ -58,29 +59,32 @@ const translations = {
     'screens.compare': 'Schuif tussen toen en nu',
     'screens.audio': 'Luister ter plekke',
     'screens.overlay': 'Leg het verleden over het heden',
+    'screens.city': 'Begin met de stadsgeschiedenis',
     'screens.routes': 'Volg kant-en-klare routes',
+    'screens.routedetail': 'Volg de route, stap voor stap',
     'screens.badges': 'Verzamel badges onderweg',
 
     'how.title': 'Hoe het werkt',
     'how.subtitle': 'In drie eenvoudige stappen begin je je reis door de tijd.',
     'step.download.title': 'Download',
-    'step.download.text': 'Download de gratis app en ga naar het centrum van Deventer. Werkt het best op locatie — maar verkennen vanuit huis kan ook.',
+    'step.download.text': 'Download de gratis app en loop de historische binnenstad in. Werkt het best op locatie — maar verkennen vanuit huis kan ook.',
     'step.explore.title': 'Verken',
     'step.explore.text': 'De app merkt wanneer je in de buurt van een historische plek bent. Wandel op je eigen tempo — er is geen vaste route.',
     'step.discover.title': 'Ontdek',
-    'step.discover.text': "Luister naar verhalen, vergelijk oude foto's en ontdek de verborgen lagen van de stad om je heen.",
+    'step.discover.text': "Luister naar verhalen, vergelijk oude foto's en ontdek de verborgen geschiedenis van de stad om je heen.",
 
-    'locations.title': '23 locaties om te ontdekken',
+    'locations.title': '31 locaties om te ontdekken',
     'locations.subtitle': 'Middeleeuwse kerken, Hanze-pakhuizen, eeuwenoude marktpleinen — elk met zijn eigen verhaal.',
-    'locations.waag': 'Waaggebouw, 1528',
-    'locations.lebuinus': 'Gesticht in de 8e eeuw',
-    'locations.more_title': 'En nog 20 meer…',
-    'locations.more_sub': 'Download om ze allemaal te ontdekken',
-    'locations.more': 'Van de <span>Brink</span> tot het <span>Bergkwartier</span> — een wandeling door 1000 jaar geschiedenis.',
-    'locations.multicity': 'Beginnend in Deventer — meer steden volgen.',
+    'locations.waag': 'Deventer · waaggebouw, 1528',
+    'locations.lebuinus': 'Deventer · gesticht in de 8e eeuw',
+    'locations.brink': 'Deventer · eeuwenoud marktplein',
+    'locations.drieharingen': 'Deventer · Hanze-pakhuizen, 1575',
+    'locations.walburgis': 'Zutphen · middeleeuwse kerk',
+    'locations.drogenap': 'Zutphen · stadstoren, 1444',
+    'locations.multicity': 'In Deventer en Zutphen — meer steden volgen.',
 
     'cta.title': 'Nu gratis te downloaden',
-    'cta.text': 'Walk Through Time staat live in de App Store en Google Play. Download gratis en stap terug in de tijd.',
+    'cta.text': 'Walk Through Time is te downloaden in de App Store en Google Play. Download gratis en stap terug in de tijd.',
     'store.apple_small': 'Download in de',
     'store.apple_aria': 'Download Walk Through Time in de App Store',
     'store.google_small': 'Ontdek het op',
@@ -99,8 +103,8 @@ const translations = {
   },
 
   en: {
-    'meta.title': "Walk Through Time — Discover Deventer's Hidden History",
-    'meta.description': 'Walk through centuries of history in Deventer. An audio tour app with colour reconstructions of the past, historical maps, and 23 fascinating locations to discover.',
+    'meta.title': 'Walk Through Time — Discover the Hidden History of Your City',
+    'meta.description': 'Walk through centuries of history in historic Dutch cities. An audio tour app with colour reconstructions of the past, historical maps, and 31 locations across Deventer and Zutphen — with more cities on the way.',
 
     'nav.features': 'Features',
     'nav.discover': 'Discover',
@@ -110,12 +114,12 @@ const translations = {
 
     'hero.badge': 'Now free on the App Store & Google Play',
     'hero.title': 'Walk Through <span>Time</span>',
-    'hero.text': 'Discover centuries of history hidden in the streets of Deventer. Listen to stories, compare past and present, and see the city as it once was.',
+    'hero.text': 'Discover centuries of history hidden in the streets around you. Listen to stories, compare past and present, and see the city as it once was.',
     'hero.cta_primary': 'Download free',
     'hero.cta_secondary': 'See how it works',
 
     'features.title': 'History Comes Alive',
-    'features.subtitle': "Six ways to experience Deventer's rich past, right from your phone.",
+    'features.subtitle': "Six ways to experience a city's rich past, right from your phone.",
     'feature.audio.title': 'Audio stories on location',
     'feature.audio.text': 'Every place has its own narrated story. Put in your earbuds, walk through the city, and let history speak to you — even with your screen off. An overarching city history plays as an introduction.',
     'feature.photo.title': 'The past brought to life',
@@ -133,7 +137,8 @@ const translations = {
     'comparison.subtitle': 'Drag the slider from the original archive image to the colour reconstruction.',
     'comparison.before': 'Original',
     'comparison.after': 'Reconstruction',
-    'comparison.caption': 'De Brink — a centuries-old scene, brought back to life',
+    'comparison.caption': 'Grote Kerkhof, Deventer — a circa-1750 engraving, brought back to life',
+    'comparison.caption2': 'Berkelpoort, Zutphen — an old photo, freshly colourised',
     'comparison.slider_aria': 'Slide to compare before and after',
 
     'screens.title': 'A Look Inside the App',
@@ -142,29 +147,32 @@ const translations = {
     'screens.compare': 'Slide between then and now',
     'screens.audio': 'Listen on the spot',
     'screens.overlay': 'Lay the past over the present',
+    'screens.city': "Start with the city's history",
     'screens.routes': 'Follow ready-made routes',
+    'screens.routedetail': 'Follow the route, step by step',
     'screens.badges': 'Collect badges as you go',
 
     'how.title': 'How It Works',
     'how.subtitle': 'Three simple steps to start your journey through time.',
     'step.download.title': 'Download',
-    'step.download.text': "Download the free app and head to Deventer's city center. Works best on location — but feel free to explore from home too.",
+    'step.download.text': "Download the free app and step into the historic old town. Works best on location — but feel free to explore from home too.",
     'step.explore.title': 'Explore',
     'step.explore.text': "The app detects when you're near a historic site. Walk at your own pace — there's no fixed route.",
     'step.discover.title': 'Discover',
-    'step.discover.text': 'Listen to stories, compare historic photos, and uncover the hidden layers of the city around you.',
+    'step.discover.text': 'Listen to stories, compare historic photos, and uncover the hidden history of the city around you.',
 
-    'locations.title': '23 Locations to Discover',
+    'locations.title': '31 Locations to Discover',
     'locations.subtitle': 'Medieval churches, Hanseatic warehouses, centuries-old market squares — each with its own story.',
-    'locations.waag': 'Weighing house, est. 1528',
-    'locations.lebuinus': 'Founded in the 8th century',
-    'locations.more_title': 'And 20 More…',
-    'locations.more_sub': 'Download to discover them all',
-    'locations.more': 'From the <span>Brink</span> to the <span>Bergkwartier</span> — a walk through 1000 years of history.',
-    'locations.multicity': 'Starting in Deventer — more cities coming soon.',
+    'locations.waag': 'Deventer · weighing house, est. 1528',
+    'locations.lebuinus': 'Deventer · founded in the 8th century',
+    'locations.brink': 'Deventer · centuries-old market square',
+    'locations.drieharingen': 'Deventer · Hanseatic warehouses, 1575',
+    'locations.walburgis': 'Zutphen · medieval church',
+    'locations.drogenap': 'Zutphen · city tower, 1444',
+    'locations.multicity': 'In Deventer and Zutphen — more cities coming soon.',
 
     'cta.title': 'Free to Download Now',
-    'cta.text': 'Walk Through Time is live on the App Store and Google Play. Download it free and step back in time.',
+    'cta.text': 'Walk Through Time is available on the App Store and Google Play. Download it free and step back in time.',
     'store.apple_small': 'Download on the',
     'store.apple_aria': 'Download Walk Through Time on the App Store',
     'store.google_small': 'Get it on',
@@ -308,9 +316,11 @@ function initScrollAnimations() {
    Image comparison slider
    ============================================ */
 function initImageComparison() {
-  const wrapper = document.querySelector('.comparison-wrapper');
-  if (!wrapper) return;
+  // Meerdere sliders op de pagina — initialiseer ze allemaal los van elkaar.
+  document.querySelectorAll('.comparison-wrapper').forEach(setupComparison);
+}
 
+function setupComparison(wrapper) {
   const beforeImg = wrapper.querySelector('.comparison-img-before');
   const slider = wrapper.querySelector('.comparison-slider');
   const handle = wrapper.querySelector('.comparison-handle');
