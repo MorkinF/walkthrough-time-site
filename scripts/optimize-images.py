@@ -106,17 +106,24 @@ def to_webp(src_name, out_name, max_w, quality):
 BRAND_TERRACOTTA = (200, 75, 49)  # #C84B31
 
 
-def fill_white(base, color=BRAND_TERRACOTTA):
-    """Vervang witte/grijze (neutraal-lichte) pixels door het merk-terracotta.
+def fill_white(base):
+    """Vervang witte/grijze (neutraal-lichte) pixels door de kaderkleur van het icoon.
 
     Pakt zowel de achtergrond ALS het lichte strookje onderaan het icoon. Truc:
     de crème kaart is wárm (rood >> blauw), terwijl het ongewenste wit neutraal is
     (R~G~B). Dus vullen we alleen pixels die licht én neutraal zijn; de kaart blijft.
+
+    De vulkleur wordt uit het icoon zélf bemonsterd (de mediaan van het rode kader),
+    zodat de opgevulde hoeken exact dezelfde tint hebben als de rand van het icoon.
     """
     import numpy as np
 
     arr = np.array(base.convert("RGB"))
     v = arr.astype(int)
+    # Kader-rood: warm rood (hoog rood, laag blauw/groen) — sluit crème + navy uit.
+    frame = (v[:, :, 0] > 150) & (v[:, :, 2] < 90) & (v[:, :, 1] < 120)
+    color = (tuple(int(x) for x in np.median(v[frame], axis=0).round())
+             if frame.any() else BRAND_TERRACOTTA)
     mn = v.min(axis=2)
     spread = v.max(axis=2) - mn
     neutral_light = (mn > 214) & (spread < 24)
