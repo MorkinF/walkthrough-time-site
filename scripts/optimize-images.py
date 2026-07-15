@@ -106,25 +106,21 @@ def to_webp(src_name, out_name, max_w, quality):
 BRAND_TERRACOTTA = (200, 75, 49)  # #C84B31
 
 
-def fill_border_white(base, color=BRAND_TERRACOTTA):
-    """Vervang de witte achtergrond RONDOM het logo door het merk-terracotta.
+def fill_white(base, color=BRAND_TERRACOTTA):
+    """Vervang witte/grijze (neutraal-lichte) pixels door het merk-terracotta.
 
-    Flood-fill vanaf de rand (net als de RGB->RGBA-conversie in CLAUDE.md): alleen
-    wit dat aan de beeldrand vastzit wordt gevuld, zodat wit BINNEN het logo blijft.
-    Een kleine dilation eet de anti-aliased witte ring rond het logo mee weg.
+    Pakt zowel de achtergrond ALS het lichte strookje onderaan het icoon. Truc:
+    de crème kaart is wárm (rood >> blauw), terwijl het ongewenste wit neutraal is
+    (R~G~B). Dus vullen we alleen pixels die licht én neutraal zijn; de kaart blijft.
     """
     import numpy as np
-    from scipy import ndimage
 
     arr = np.array(base.convert("RGB"))
-    rgb = arr.astype(int)
-    white = (rgb[:, :, 0] > 240) & (rgb[:, :, 1] > 240) & (rgb[:, :, 2] > 240)
-    labels, _ = ndimage.label(white)
-    border = set(labels[0, :]) | set(labels[-1, :]) | set(labels[:, 0]) | set(labels[:, -1])
-    border.discard(0)
-    mask = np.isin(labels, list(border))
-    mask = ndimage.binary_dilation(mask, iterations=max(2, base.size[0] // 200))
-    arr[mask] = color
+    v = arr.astype(int)
+    mn = v.min(axis=2)
+    spread = v.max(axis=2) - mn
+    neutral_light = (mn > 214) & (spread < 24)
+    arr[neutral_light] = color
     return Image.fromarray(arr.astype("uint8"), "RGB")
 
 
@@ -158,7 +154,7 @@ def make_favicons():
         print("  ! icon.png ontbreekt, favicons overgeslagen")
         return
     base = crop_to_logo(Image.open(src).convert("RGBA"))
-    base = fill_border_white(base).convert("RGBA")
+    base = fill_white(base).convert("RGBA")
     for name, size in FAVICONS:
         out = os.path.join(IMAGES, name)
         base.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
