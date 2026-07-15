@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
   nl: {
     'meta.title': 'Walk Through Time — Ontdek de verborgen geschiedenis van je stad',
-    'meta.description': "Wandel door eeuwen geschiedenis in historische Nederlandse steden. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 31 locaties in Deventer en Zutphen — meer steden volgen.",
+    'meta.description': "Wandel door eeuwen geschiedenis in historische Nederlandse steden. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 33 locaties in Deventer en Zutphen — meer steden volgen.",
 
     'nav.features': 'Functies',
     'nav.discover': 'Ontdek',
@@ -73,7 +73,7 @@ const translations = {
     'step.discover.title': 'Ontdek',
     'step.discover.text': "Luister naar verhalen, vergelijk oude foto's en ontdek de verborgen geschiedenis van de stad om je heen.",
 
-    'locations.title': '31 locaties om te ontdekken',
+    'locations.title': '33 locaties om te ontdekken',
     'locations.subtitle': 'Middeleeuwse kerken, Hanze-pakhuizen, eeuwenoude marktpleinen — elk met zijn eigen verhaal.',
     'locations.waag': 'Deventer · waaggebouw, 1528',
     'locations.lebuinus': 'Deventer · gesticht in de 8e eeuw',
@@ -104,7 +104,7 @@ const translations = {
 
   en: {
     'meta.title': 'Walk Through Time — Discover the Hidden History of Your City',
-    'meta.description': 'Walk through centuries of history in historic Dutch cities. An audio tour app with colour reconstructions of the past, historical maps, and 31 locations across Deventer and Zutphen — with more cities on the way.',
+    'meta.description': 'Walk through centuries of history in historic Dutch cities. An audio tour app with colour reconstructions of the past, historical maps, and 33 locations across Deventer and Zutphen — with more cities on the way.',
 
     'nav.features': 'Features',
     'nav.discover': 'Discover',
@@ -161,7 +161,7 @@ const translations = {
     'step.discover.title': 'Discover',
     'step.discover.text': 'Listen to stories, compare historic photos, and uncover the hidden history of the city around you.',
 
-    'locations.title': '31 Locations to Discover',
+    'locations.title': '33 Locations to Discover',
     'locations.subtitle': 'Medieval churches, Hanseatic warehouses, centuries-old market squares — each with its own story.',
     'locations.waag': 'Deventer · weighing house, est. 1528',
     'locations.lebuinus': 'Deventer · founded in the 8th century',
