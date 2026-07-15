@@ -103,7 +103,32 @@ def to_webp(src_name, out_name, max_w, quality):
     print(f"  {src_name:32s} -> {out_name:28s} {img.size[0]}x{img.size[1]}  {kb} KB")
 
 
-def crop_to_logo(base, pad_frac=0.03):
+BRAND_TERRACOTTA = (200, 75, 49)  # #C84B31
+
+
+def fill_border_white(base, color=BRAND_TERRACOTTA):
+    """Vervang de witte achtergrond RONDOM het logo door het merk-terracotta.
+
+    Flood-fill vanaf de rand (net als de RGB->RGBA-conversie in CLAUDE.md): alleen
+    wit dat aan de beeldrand vastzit wordt gevuld, zodat wit BINNEN het logo blijft.
+    Een kleine dilation eet de anti-aliased witte ring rond het logo mee weg.
+    """
+    import numpy as np
+    from scipy import ndimage
+
+    arr = np.array(base.convert("RGB"))
+    rgb = arr.astype(int)
+    white = (rgb[:, :, 0] > 240) & (rgb[:, :, 1] > 240) & (rgb[:, :, 2] > 240)
+    labels, _ = ndimage.label(white)
+    border = set(labels[0, :]) | set(labels[-1, :]) | set(labels[:, 0]) | set(labels[:, -1])
+    border.discard(0)
+    mask = np.isin(labels, list(border))
+    mask = ndimage.binary_dilation(mask, iterations=max(2, base.size[0] // 200))
+    arr[mask] = color
+    return Image.fromarray(arr.astype("uint8"), "RGB")
+
+
+def crop_to_logo(base, pad_frac=0.0):
     """Snijd de uniforme (bijna-witte) rand rond het logo weg en maak het vierkant.
 
     icon.png heeft ~15% witte marge rond het logo; die zie je terug als een witte
@@ -133,6 +158,7 @@ def make_favicons():
         print("  ! icon.png ontbreekt, favicons overgeslagen")
         return
     base = crop_to_logo(Image.open(src).convert("RGBA"))
+    base = fill_border_white(base).convert("RGBA")
     for name, size in FAVICONS:
         out = os.path.join(IMAGES, name)
         base.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
