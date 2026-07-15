@@ -6,6 +6,21 @@
 [build]
   publish = "."
 
+# Stuur het .nl-domein door naar het primaire .com-domein (301). Netlify
+# redirect custom-domein-aliassen niet vanzelf naar het primaire domein, dus
+# dit doen we expliciet. `force = true` zodat de redirect vóór file-serving gaat.
+[[redirects]]
+  from = "https://walkthrough-time.nl/*"
+  to = "https://walkthrough-time.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "http://walkthrough-time.nl/*"
+  to = "https://walkthrough-time.com/:splat"
+  status = 301
+  force = true
+
 # Long-cache the static assets (images/css/js are versioned by edits, html stays fresh).
 [[headers]]
   for = "/images/*"
