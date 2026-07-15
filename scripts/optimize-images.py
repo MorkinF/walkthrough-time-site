@@ -103,12 +103,36 @@ def to_webp(src_name, out_name, max_w, quality):
     print(f"  {src_name:32s} -> {out_name:28s} {img.size[0]}x{img.size[1]}  {kb} KB")
 
 
+def crop_to_logo(base, pad_frac=0.03):
+    """Snijd de uniforme (bijna-witte) rand rond het logo weg en maak het vierkant.
+
+    icon.png heeft ~15% witte marge rond het logo; die zie je terug als een witte
+    rand in het tab-icoontje. Deze crop laat het logo de favicon vullen.
+    """
+    import numpy as np
+
+    arr = np.array(base)
+    rgb = arr[:, :, :3].astype(int)
+    alpha = arr[:, :, 3]
+    near_white = (rgb[:, :, 0] > 245) & (rgb[:, :, 1] > 245) & (rgb[:, :, 2] > 245)
+    content = ~(near_white | (alpha < 10))
+    ys, xs = np.where(content)
+    if len(xs) == 0:
+        return base
+    cx, cy = (xs.min() + xs.max()) / 2, (ys.min() + ys.max()) / 2
+    half = max(xs.max() - xs.min(), ys.max() - ys.min()) / 2 * (1 + pad_frac)
+    W, H = base.size
+    box = (max(0, int(cx - half)), max(0, int(cy - half)),
+           min(W, int(cx + half)), min(H, int(cy + half)))
+    return base.crop(box)
+
+
 def make_favicons():
     src = os.path.join(IMAGES, "icon.png")
     if not os.path.exists(src):
         print("  ! icon.png ontbreekt, favicons overgeslagen")
         return
-    base = Image.open(src).convert("RGBA")
+    base = crop_to_logo(Image.open(src).convert("RGBA"))
     for name, size in FAVICONS:
         out = os.path.join(IMAGES, name)
         base.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
