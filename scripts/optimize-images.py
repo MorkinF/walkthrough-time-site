@@ -120,8 +120,9 @@ def fill_white(base):
 
     arr = np.array(base.convert("RGB"))
     v = arr.astype(int)
-    # Kader-rood: warm rood (hoog rood, laag blauw/groen) — sluit crème + navy uit.
-    frame = (v[:, :, 0] > 150) & (v[:, :, 2] < 90) & (v[:, :, 1] < 120)
+    # Donkerrode rand rond de plattegrond: de dominante donkere band (geen lichte
+    # bevel-glans). Sluit crème (warm licht) + navy (blauw) uit. Mediaan ~#9A2303.
+    frame = (v[:, :, 0] > 120) & (v[:, :, 0] < 185) & (v[:, :, 2] < 40) & (v[:, :, 1] < 70)
     color = (tuple(int(x) for x in np.median(v[frame], axis=0).round())
              if frame.any() else BRAND_TERRACOTTA)
     mn = v.min(axis=2)
