@@ -82,6 +82,8 @@ const translations = {
     'locations.walburgis': 'Zutphen · middeleeuwse kerk',
     'locations.drogenap': 'Zutphen · stadstoren, 1444',
     'locations.peperbus': 'Zwolle · kerktoren, 1463',
+    'locations.sassenpoort': 'Zwolle · stadspoort, 1409',
+    'locations.fraterhuis': 'Zwolle · gesticht in 1393',
     'locations.multicity': 'In Deventer, Zutphen en Zwolle. Meer steden volgen.',
 
     'cta.title': 'Nu gratis te downloaden',
@@ -171,6 +173,8 @@ const translations = {
     'locations.walburgis': 'Zutphen · medieval church',
     'locations.drogenap': 'Zutphen · city tower, 1444',
     'locations.peperbus': 'Zwolle · church tower, 1463',
+    'locations.sassenpoort': 'Zwolle · city gate, 1409',
+    'locations.fraterhuis': 'Zwolle · founded in 1393',
     'locations.multicity': 'In Deventer, Zutphen and Zwolle. More cities coming soon.',
 
     'cta.title': 'Free to Download Now',

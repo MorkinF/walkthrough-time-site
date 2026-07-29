@@ -45,6 +45,12 @@ CONTENT = [
     ("walburgiskerk_original.jpg", "walburgiskerk_original.webp", 900, 82),
     ("drogenapstoren_original.jpg", "drogenapstoren_original.webp", 900, 82),
     ("peperbustoren_original.jpg", "peperbustoren_original.webp", 900, 82),
+    ("sassenpoort_original.jpg", "sassenpoort_original.webp", 900, 82),
+    # Rijke Fraterhuis: de bron hier is bewust een bijgesneden versie van het
+    # Supabase-origineel. Dat is een glasnegatief-scan met zwarte klemmen in de
+    # hoeken; die vielen binnen het kaartkader. ~7,5% van de zijkanten en ~5,5%
+    # van boven/onder weggesneden.
+    ("rijkefraterhuis_original.jpg", "rijkefraterhuis_original.webp", 900, 82),
     # Hero-achtergrond (background-size 150%) + locatiekaart -> grotere bron.
     ("deventer-1899.png", "deventer-1899.webp", 1600, 82),
 ]

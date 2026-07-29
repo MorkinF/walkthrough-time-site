@@ -672,9 +672,11 @@ section {
   margin-bottom: 2.5rem;
 }
 
-/* Blijft er op de laatste rij één kaart over (7 kaarten in een 3-koloms grid),
-   zet die dan in de middelste kolom in plaats van links uitgelijnd. Zonder dit
-   oogt de losse kaart als een fout in de opmaak. */
+/* Vangnet: blijft er op de laatste rij één kaart over (aantal = 3n+1), zet die
+   dan in de middelste kolom in plaats van links uitgelijnd, want zo'n losse
+   kaart oogt als een fout in de opmaak. Bij het huidige aantal van 9 vult de
+   grid precies, dus deze regel doet nu niets. Hij blijft staan zodat een
+   tiende kaart geen scheve rij oplevert. */
 .location-card:last-child:nth-child(3n + 1) {
   grid-column: 2;
 }
