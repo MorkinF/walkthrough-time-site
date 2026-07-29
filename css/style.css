@@ -672,6 +672,13 @@ section {
   margin-bottom: 2.5rem;
 }
 
+/* Blijft er op de laatste rij één kaart over (7 kaarten in een 3-koloms grid),
+   zet die dan in de middelste kolom in plaats van links uitgelijnd. Zonder dit
+   oogt de losse kaart als een fout in de opmaak. */
+.location-card:last-child:nth-child(3n + 1) {
+  grid-column: 2;
+}
+
 .location-card {
   position: relative;
   border-radius: 16px;
@@ -949,6 +956,12 @@ section {
     max-width: 360px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  /* Eén kolom hier, dus de centreer-regel voor de losse laatste kaart moet
+     terug: anders zou grid-column: 2 een lege tweede kolom aanmaken. */
+  .location-card:last-child:nth-child(3n + 1) {
+    grid-column: auto;
   }
 
   .hero h1 {

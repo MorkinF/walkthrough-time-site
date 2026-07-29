@@ -44,6 +44,7 @@ CONTENT = [
     ("drieharingen_original.jpg", "drieharingen_original.webp", 900, 82),
     ("walburgiskerk_original.jpg", "walburgiskerk_original.webp", 900, 82),
     ("drogenapstoren_original.jpg", "drogenapstoren_original.webp", 900, 82),
+    ("peperbustoren_original.jpg", "peperbustoren_original.webp", 900, 82),
     # Hero-achtergrond (background-size 150%) + locatiekaart -> grotere bron.
     ("deventer-1899.png", "deventer-1899.webp", 1600, 82),
 ]
