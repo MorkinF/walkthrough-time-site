@@ -169,13 +169,35 @@ def crop_to_logo(base, pad_frac=0.0):
     return base.crop(box)
 
 
+def has_white_border(img):
+    """Tekent de bron een icoonvorm IN het beeld, met een witte marge eromheen?
+
+    Bepalend voor of crop_to_logo() + fill_white() moeten draaien. Die twee
+    repareren namelijk een probleem dat alleen het oude tegel-icoon had. Een
+    full-bleed bron loopt tot de rand door; dan zou fill_white() lichte plekken
+    in de echte tekening (glans op de wijzerplaat, licht perkament) donkerrood
+    overschilderen en crop_to_logo() een willekeurige uitsnede maken.
+
+    Meet de buitenste pixelring: overwegend bijna-wit betekent marge.
+    """
+    import numpy as np
+
+    rgb = np.array(img.convert("RGB")).astype(int)
+    edge = np.concatenate([rgb[0, :], rgb[-1, :], rgb[:, 0], rgb[:, -1]])
+    return (edge.min(axis=1) > 240).mean() > 0.5
+
+
 def make_favicons():
     src = os.path.join(IMAGES, "icon.png")
     if not os.path.exists(src):
         print("  ! icon.png ontbreekt, favicons overgeslagen")
         return
-    base = crop_to_logo(Image.open(src).convert("RGBA"))
-    base = fill_white(base).convert("RGBA")
+    base = Image.open(src).convert("RGBA")
+    if has_white_border(base):
+        base = fill_white(crop_to_logo(base)).convert("RGBA")
+        print("  (witte marge gedetecteerd -> bijgesneden + opgevuld)")
+    else:
+        print("  (full-bleed bron -> onbewerkt geschaald)")
     for name, size in FAVICONS:
         out = os.path.join(IMAGES, name)
         base.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
