@@ -51,6 +51,12 @@ CONTENT = [
     # hoeken; die vielen binnen het kaartkader. ~7,5% van de zijkanten en ~5,5%
     # van boven/onder weggesneden.
     ("rijkefraterhuis_original.jpg", "rijkefraterhuis_original.webp", 900, 82),
+    # Amersfoort (sinds aug 2026 de op een na grootste stad in de app).
+    # De OLV-toren-bron is maar 813px breed; resize_to_width schaalt niet op,
+    # dus die blijft 813 -- ruim genoeg voor een kaart van ~340px op retina.
+    ("koppelpoort_original.jpg", "koppelpoort_original.webp", 900, 82),
+    ("muurhuizen_original.jpg", "muurhuizen_original.webp", 900, 82),
+    ("onzelievevrouwetoren_original.jpg", "onzelievevrouwetoren_original.webp", 900, 82),
     # Hero-achtergrond (background-size 150%) + locatiekaart -> grotere bron.
     ("deventer-1899.png", "deventer-1899.webp", 1600, 82),
 ]

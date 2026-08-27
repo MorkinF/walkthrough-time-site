@@ -674,9 +674,9 @@ section {
 
 /* Vangnet: blijft er op de laatste rij één kaart over (aantal = 3n+1), zet die
    dan in de middelste kolom in plaats van links uitgelijnd, want zo'n losse
-   kaart oogt als een fout in de opmaak. Bij het huidige aantal van 9 vult de
+   kaart oogt als een fout in de opmaak. Bij het huidige aantal van 12 vult de
    grid precies, dus deze regel doet nu niets. Hij blijft staan zodat een
-   tiende kaart geen scheve rij oplevert. */
+   dertiende kaart geen scheve rij oplevert. */
 .location-card:last-child:nth-child(3n + 1) {
   grid-column: 2;
 }

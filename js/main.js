@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
 const translations = {
   nl: {
     'meta.title': 'Walk Through Time — Ontdek de verborgen geschiedenis van je stad',
-    'meta.description': "Wandel door eeuwen geschiedenis in historische Nederlandse steden. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 45 locaties in Deventer, Zutphen en Zwolle. Meer steden volgen.",
+    'meta.description': "Wandel door eeuwen geschiedenis in historische Nederlandse steden. Een audio-tour app met ingekleurde reconstructies van het verleden, historische kaarten en 74 locaties in Deventer, Zutphen, Zwolle, Amersfoort en Nijmegen. Meer steden volgen.",
 
     'nav.features': 'Functies',
     'nav.discover': 'Ontdek',
@@ -39,7 +39,7 @@ const translations = {
     'feature.map.title': 'Historische kaarten',
     'feature.map.text': 'Leg eeuwenoude stadsplattegronden over actuele kaarten. Bepaal zelf welke kaart je onder je voeten ziet verschijnen.',
     'feature.routes.title': 'Wandelroutes & navigatie',
-    'feature.routes.text': 'Kies voor kant-en-klare routes door themagebieden zoals de Hanze of religieus erfgoed, inclusief voetgangersnavigatie van plek naar plek. Of kies je eigen route.',
+    'feature.routes.text': 'Kies uit kant-en-klare routes langs alle locaties of rond een thema, van de Hanze en religieus erfgoed tot de oude stadsmuren en het water, inclusief voetgangersnavigatie van plek naar plek. Of kies je eigen route.',
     'feature.arrival.title': 'Aankomst-meldingen',
     'feature.arrival.text': 'Krijg een trilling en melding zodra je bij een nieuwe locatie aankomt, zelfs met je telefoon in je broekzak. Geen vaste route nodig.',
     'feature.badges.title': 'Badges & voortgang',
@@ -73,7 +73,7 @@ const translations = {
     'step.discover.title': 'Ontdek',
     'step.discover.text': "Luister naar verhalen, vergelijk oude foto's en ontdek de verborgen geschiedenis van de stad om je heen.",
 
-    'locations.title': 'Drie steden. 45 locaties om te ontdekken',
+    'locations.title': 'Vijf steden. 74 locaties om te ontdekken',
     'locations.subtitle': 'Middeleeuwse kerken, Hanze-pakhuizen en eeuwenoude marktpleinen, elk met zijn eigen verhaal.',
     'locations.waag': 'Deventer · waaggebouw, 1528',
     'locations.lebuinus': 'Deventer · gesticht in de 8e eeuw',
@@ -84,7 +84,10 @@ const translations = {
     'locations.peperbus': 'Zwolle · kerktoren, 1463',
     'locations.sassenpoort': 'Zwolle · stadspoort, 1409',
     'locations.fraterhuis': 'Zwolle · gesticht in 1393',
-    'locations.multicity': 'In Deventer, Zutphen en Zwolle. Meer steden volgen.',
+    'locations.koppelpoort': 'Amersfoort · water- en landpoort, 1400',
+    'locations.muurhuizen': 'Amersfoort · huizen op de eerste stadsmuur',
+    'locations.olvtoren': 'Amersfoort · kerktoren, 15e eeuw',
+    'locations.multicity': 'In Deventer, Zutphen, Zwolle en Amersfoort. Nijmegen is net begonnen. Meer steden volgen.',
 
     'cta.title': 'Nu gratis te downloaden',
     'cta.text': 'Walk Through Time is te downloaden in de App Store en Google Play. Download gratis en stap terug in de tijd.',
@@ -93,7 +96,7 @@ const translations = {
     'store.google_small': 'Ontdek het op',
     'store.google_aria': 'Ontdek Walk Through Time op Google Play',
     'newsletter.title': 'Blijf op de hoogte van nieuwe steden',
-    'newsletter.text': 'Deventer, Zutphen en Zwolle staan live. Er volgen meer steden. Laat je e-mail achter, dan laten we het je weten.',
+    'newsletter.text': 'Deventer, Zutphen, Zwolle en Amersfoort staan live, Nijmegen is net begonnen. Er volgen meer steden. Laat je e-mail achter, dan laten we het je weten.',
     'form.placeholder': 'jouw@email.nl',
     'form.button': 'Hou me op de hoogte',
     'form.note': 'We gebruiken je e-mail alleen voor nieuws over nieuwe steden, niets anders.',
@@ -107,7 +110,7 @@ const translations = {
 
   en: {
     'meta.title': 'Walk Through Time — Discover the Hidden History of Your City',
-    'meta.description': 'Walk through centuries of history in historic Dutch cities. An audio tour app with colour reconstructions of the past, historical maps, and 45 locations across Deventer, Zutphen and Zwolle. More cities on the way.',
+    'meta.description': 'Walk through centuries of history in historic Dutch cities. An audio tour app with colour reconstructions of the past, historical maps, and 74 locations across Deventer, Zutphen, Zwolle, Amersfoort and Nijmegen. More cities on the way.',
 
     'nav.features': 'Features',
     'nav.discover': 'Discover',
@@ -130,7 +133,7 @@ const translations = {
     'feature.map.title': 'Historical maps',
     'feature.map.text': "Lay centuries-old city maps over today's streets. Decide for yourself which map appears beneath your feet.",
     'feature.routes.title': 'Routes & navigation',
-    'feature.routes.text': 'Choose a ready-made route through themed areas such as the Hanseatic trade or religious heritage, with pedestrian navigation from place to place. Or find your own way.',
+    'feature.routes.text': 'Choose a ready-made route past every location or around a theme, from Hanseatic trade and religious heritage to the old city walls and the water, with pedestrian navigation from place to place. Or find your own way.',
     'feature.arrival.title': 'Arrival alerts',
     'feature.arrival.text': 'Get a buzz and a notification the moment you reach a new location, even with your phone in your pocket. No fixed route required.',
     'feature.badges.title': 'Badges & progress',
@@ -164,7 +167,7 @@ const translations = {
     'step.discover.title': 'Discover',
     'step.discover.text': 'Listen to stories, compare historic photos, and uncover the hidden history of the city around you.',
 
-    'locations.title': 'Three Cities. 45 Locations to Discover',
+    'locations.title': 'Five Cities. 74 Locations to Discover',
     'locations.subtitle': 'Medieval churches, Hanseatic warehouses and centuries-old market squares, each with its own story.',
     'locations.waag': 'Deventer · weighing house, est. 1528',
     'locations.lebuinus': 'Deventer · founded in the 8th century',
@@ -175,7 +178,10 @@ const translations = {
     'locations.peperbus': 'Zwolle · church tower, 1463',
     'locations.sassenpoort': 'Zwolle · city gate, 1409',
     'locations.fraterhuis': 'Zwolle · founded in 1393',
-    'locations.multicity': 'In Deventer, Zutphen and Zwolle. More cities coming soon.',
+    'locations.koppelpoort': 'Amersfoort · water and land gate, 1400',
+    'locations.muurhuizen': 'Amersfoort · houses built on the first city wall',
+    'locations.olvtoren': 'Amersfoort · church tower, 15th century',
+    'locations.multicity': 'In Deventer, Zutphen, Zwolle and Amersfoort. Nijmegen has just started. More cities coming soon.',
 
     'cta.title': 'Free to Download Now',
     'cta.text': 'Walk Through Time is available on the App Store and Google Play. Download it free and step back in time.',
@@ -184,7 +190,7 @@ const translations = {
     'store.google_small': 'Get it on',
     'store.google_aria': 'Get Walk Through Time on Google Play',
     'newsletter.title': 'Stay posted on new cities',
-    'newsletter.text': "Deventer, Zutphen and Zwolle are live. More cities are on the way. Leave your email and we'll let you know.",
+    'newsletter.text': "Deventer, Zutphen, Zwolle and Amersfoort are live, and Nijmegen has just started. More cities are on the way. Leave your email and we'll let you know.",
     'form.placeholder': 'you@email.com',
     'form.button': 'Notify me',
     'form.note': "We'll only use your email for news about new cities, nothing else.",
