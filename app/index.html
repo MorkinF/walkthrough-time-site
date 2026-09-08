@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Walk Through Time downloaden</title>
+  <meta name="description" content="Download Walk Through Time in de App Store of Google Play. Gratis, zonder account.">
+  <meta name="theme-color" content="#2D4059">
+
+  <!-- Deze pagina is een doorgeefluik en hoort niet in de zoekresultaten:
+       wie hem vindt via Google wil de homepage, niet een lege tussenstap. -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="canonical" href="https://walkthrough-time.com/">
+
+  <meta property="og:site_name" content="Walk Through Time">
+  <meta property="og:title" content="Walk Through Time downloaden">
+  <meta property="og:description" content="Gratis, zonder account. In de App Store en Google Play.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://walkthrough-time.com/app">
+  <meta property="og:image" content="https://walkthrough-time.com/images/og-image.jpg">
+  <meta property="og:locale" content="nl_NL">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16.png">
+  <link rel="apple-touch-icon" href="../images/apple-touch-icon.png">
+
+  <!-- Alleen voor de merkkleuren en de winkelknoppen; de rest van dit blad is
+       landingspagina-opmaak die deze pagina niet gebruikt. -->
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    /* Deze pagina heeft geen kopbalk, geen secties en geen scroll: één blok
+       midden op het scherm. Daarom een eigen laagje bovenop style.css.
+       
+       De achtergrond is navy en niet de gebruikelijke crème, en dat is geen
+       smaakkeuze: .store-btn in style.css is wit op een doorschijnend wit vlak,
+       ontworpen voor de donkere CTA-sectie van de homepage (.cta gebruikt
+       var(--secondary)). Op een lichte achtergrond zijn die knoppen zo goed als
+       onzichtbaar. Dezelfde kleur aanhouden is netter dan de knopstijl hier
+       overschrijven, want dan blijven de knoppen overal op de site gelijk. */
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem 1.25rem;
+      background: var(--secondary);
+      color: #fff;
+    }
+
+    .redirect {
+      max-width: 26rem;
+      width: 100%;
+      text-align: center;
+    }
+
+    /* style.css zet img op display:block, en een blok met een vaste breedte
+       gaat niet mee met text-align:center. Vandaar de automatische marges. */
+    .redirect img {
+      width: 88px;
+      height: 88px;
+      border-radius: 20px;
+      margin: 0 auto 1.5rem;
+    }
+
+    .redirect h1 {
+      font-size: 1.5rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .redirect p {
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 2rem;
+    }
+
+    /* De knoppen staan in style.css naast elkaar; hier zijn ze het enige op de
+       pagina, dus onder elkaar leest rustiger en is de raakvlakte groter.
+       Ze rekken daardoor over de volle breedte, en dan moet de inhoud alsnog
+       gecentreerd worden: .store-btn regelt alleen de verticale uitlijning. */
+    .redirect .store-buttons {
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0.75rem;
+    }
+
+    .redirect .store-btn {
+      justify-content: center;
+    }
+
+    .redirect .home-link {
+      display: inline-block;
+      margin-top: 2rem;
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.9rem;
+    }
+
+    .redirect .home-link:hover {
+      color: #fff;
+    }
+  </style>
+
+  <script>
+    // Stuur telefoons meteen door naar de juiste winkel. Wie hier vanuit een
+    // reel of een bio-link komt heeft de kortste aandacht van de hele trechter,
+    // en elke tussenstap kost mensen.
+    //
+    // Op een computer gebeurt er bewust NIETS: daar kun je de app toch niet
+    // installeren, dus dan is de keuze tonen nuttiger dan doorverwijzen.
+    //
+    // location.replace en niet location.href: replace laat geen spoor achter in
+    // de geschiedenis. Anders belandt iemand die op "terug" drukt weer op deze
+    // pagina en wordt hij meteen opnieuw doorgestuurd, met geen ontsnappen aan.
+    //
+    // Dit staat in de head zodat het vuurt voordat er iets is getekend. Werkt
+    // het niet, dan rendert de pagina hieronder gewoon en staan beide knoppen
+    // er alsnog; die zijn de terugval, niet de opsmuk.
+    (function () {
+      var APPLE = 'https://apps.apple.com/app/id6764508617';
+      var GOOGLE = 'https://play.google.com/store/apps/details?id=com.jouwgeschiedenis.deventertijdreis';
+
+      var ua = navigator.userAgent || '';
+
+      // Een iPad meldt zich sinds iPadOS 13 als "Macintosh". Het aantal
+      // aanraakpunten is wat hem alsnog verraadt: een echte Mac heeft er nul.
+      var isIOS = /iPad|iPhone|iPod/.test(ua) ||
+                  (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+      var isAndroid = /Android/.test(ua);
+
+      var doel = isIOS ? APPLE : (isAndroid ? GOOGLE : null);
+      if (doel) {
+        location.replace(doel);
+      }
+    })();
+  </script>
+</head>
+<body>
+  <main class="redirect">
+    <img src="../images/icon-96.png" alt="" width="88" height="88">
+
+    <h1>Walk Through Time</h1>
+    <p>Gratis, zonder account. Kies je winkel.</p>
+
+    <div class="store-buttons">
+      <a href="https://apps.apple.com/app/id6764508617" class="store-btn" rel="noopener"
+         aria-label="Download in de App Store">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        <div class="store-label">
+          <small>Download in de</small>
+          <strong>App Store</strong>
+        </div>
+      </a>
+      <a href="https://play.google.com/store/apps/details?id=com.jouwgeschiedenis.deventertijdreis" class="store-btn" rel="noopener"
+         aria-label="Ontdek het op Google Play">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-2.302 2.302L15.396 12l2.302-2.492zM5.864 3.458L16.8 9.79l-2.302 2.302L5.864 3.458z"/></svg>
+        <div class="store-label">
+          <small>Ontdek het op</small>
+          <strong>Google Play</strong>
+        </div>
+      </a>
+    </div>
+
+    <a href="/" class="home-link">Meer over de app</a>
+  </main>
+</body>
+</html>
