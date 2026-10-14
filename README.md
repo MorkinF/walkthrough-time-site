@@ -112,6 +112,12 @@ zonder herwerk. Tot die tijd: laat de netlify-URL gewoon in de lucht.
 
 ## Losse eindjes / opties
 
+- **Favicons (oktober 2026, nieuw logo)**: `favicon-16.png` is alleen het speldje met de skyline,
+  `favicon-32.png` het beeldmerk zonder geluidsgolven en buitenbogen; `icon.png`, `icon-96.png` en
+  `apple-touch-icon.png` zijn het volledige beeldmerk op cream. Die twee kleine favicons zijn met de hand
+  vereenvoudigd omdat het hele beeldmerk op 16/32 px onleesbaar wordt. ⚠️ `scripts/optimize-images.py`
+  overschrijft ze met een verkleinde `icon.png`. Draai dat script dus niet zonder ze daarna terug te zetten
+  (bronnen: `deventer-tijdreis/assets/brand/`).
 - **Contact-e-mail**: footer en privacy gebruiken `walkthroughtime0570@gmail.com` (consistent met de
   stores). Wil je `info@walkthrough-time.com`? Richt dan eerst die mailbox op het domein in en pas
   het adres aan in `index.html` (footer) en `privacy-policy.html`.
